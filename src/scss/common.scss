@@ -1,0 +1,488 @@
+// == Выстроить для смены порядка секций ==================
+.page-home {
+  .page {
+    display: flex;
+    flex-direction: column;
+  }
+}
+// -- отступ от хедера на всех страницах.
+.page {
+@include adaptiveValue("padding-top", 105, 100,2,1920,1440);
+@include adaptiveValue("padding-top", 100, 54,3,1439,360);
+}
+// hover with underline -----------------------------------
+._hover-line {
+  @media (min-width:$mobile){
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: toRem(1);
+      background-color: $mainColor;
+      transform: scale(0, 1);
+      transform-origin: 100% 50%;
+      transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    @media (any-hover: hover){
+      &:hover{
+        &::before {
+          transform: scale(1);
+          transform-origin: 0 50%;
+        }
+      }
+    }
+  }
+}
+
+// == decor elements images =========================
+.decor {
+  pointer-events: none;
+}
+
+// buttons ===============================
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 100%;
+  border: toRem(1) solid transparent;
+  border-radius: toRem(14);
+  padding: toRem(17);
+  text-align: center;
+  transition: color .3s ease, background-color .3s ease, border .3s ease;
+  // .btn_01
+  &_01 {
+    background-color: $orange;
+    color: white;
+    &:hover {
+      background-color: white;
+      color: $mainColor;
+      border-color: $mainColor;
+    }
+  }
+  // .btn_02
+  &_02 {
+    border-color: $mainColor;
+    background-color: white;
+    &:hover {
+      background-color: $orange;
+      color: white;
+      border-color: $orange;
+    }
+  }
+  // .btn_03
+  &_03 {
+    background-color: white;
+    &:hover {
+      background-color: $blue;
+      color: white;
+      border-color: white;
+    }
+  }
+  // .btn_04
+  &_04 {
+    background-color: $blue;
+    color: white;
+    border-color: white;
+    &:hover {
+      background-color: white;
+      color: $mainColor;
+    }
+  }
+}
+
+.btn-arrow {
+  display: block;
+  transition: all .45s ease;
+  @media (any-hover: hover){
+    &:hover{
+      transform: translateX(5px);
+    }
+  }
+  // .btn-arrow_01
+  &_01 {
+    svg {
+      @include adaptiveValue("width", 60, 40,0,1920,1440);
+      @include adaptiveValue("height", 60, 40,0,1920,1440);
+    }
+  }
+  // .btn-arrow_02
+  &_02 {
+    svg {
+      @include adaptiveValue("width", 40, 30,0,1920,550);
+      @include adaptiveValue("height", 40, 30,0,1920,550);
+    }
+  }
+  // .btn-arrow_03
+  &_03 {
+    svg {
+      @include adaptiveValue("width", 30, 20,0,1920,550);
+      @include adaptiveValue("height", 30, 20,0,1920,550);
+    }
+  }
+}
+
+// colors ==============================
+.color-orng {
+  color: $orange;
+}
+.color-blue {
+  color: $blue;
+}
+.color-gray {
+  color: $gray;
+}
+.bg-orng {
+  background-color: $orange;
+}
+.bg-blue {
+  background-color: $blue;
+}
+.bg-gray {
+  background-color: $gray;
+}
+
+// == paddings sections ----------------------
+.pdd-t {
+  @include adaptiveValue("padding-top", 100, 60);
+}
+.pdd-b {
+  @include adaptiveValue("padding-bottom", 100, 60);
+}
+
+
+// == TITLES and PARAGRAPHS ----------------------------------------
+.title-big {
+  @include adaptiveValue("font-size", 68, 51,2,1920,1440);
+  @include adaptiveValue("font-size", 51, 30,3,1439,360);
+  font-weight: 700;
+  // .title-big_accent
+  &_accent {
+    color: $blue;
+  }
+  // .title-big_accent-2
+  &_accent-2 {
+    color: white;
+  }
+}
+
+.title-two {
+  @include adaptiveValue("font-size", 48, 36,2,1920,1440);
+  @include adaptiveValue("font-size", 36, 20,3,1439,360);
+  font-weight: 700;
+  line-height: normal;
+}
+
+.txt-one {
+  @include adaptiveValue("font-size", 40, 30,2,1920,1440);
+  @include adaptiveValue("font-size", 30, 16,3,1439,360);
+  font-weight: 400;
+  line-height: 1.2;
+}
+.txt-two {
+  @include adaptiveValue("font-size", 28, 16);
+  font-weight: 500;
+  line-height: normal;
+}
+.txt-three {
+  @include adaptiveValue("font-size", 36, 18);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.txt-four {
+  font-family: "Inter"; // INTER !!!! ===============
+  @include adaptiveValue("font-size", 16, 10);
+  font-weight: 500;
+  line-height: normal;
+}
+.txt-five {
+  @include adaptiveValue("font-size", 26, 14);
+  font-weight: 700;
+}
+.txt-six {
+  @include adaptiveValue("font-size", 36, 26);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.txt-seven {
+  @include adaptiveValue("font-size", 22, 16);
+  font-weight: 400;
+  line-height: 1.2;
+}
+.txt-eight {
+  @include adaptiveValue("font-size", 22, 18);
+  font-weight: 400;
+  line-height: normal;
+}
+.txt-nine {
+  @include adaptiveValue("font-size", 24, 22);
+  font-weight: 700;
+  line-height: normal;
+}
+.txt-mac-01 {
+  @include adaptiveValue("font-size", 18, 14,0,1920,1440);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.txt-mac-02 {
+  font-size: toRem(16);
+  font-weight: 700;
+  line-height: 1.35;
+}
+.txt-mac-03 {
+  @include adaptiveValue("font-size", 16, 14,0,1920,1440);
+  font-weight: 500;
+  line-height: normal;
+}
+
+// == LINES ON ALL PAGES =================================
+.line-dark {
+  @media (min-width:$mobile){
+    border-bottom: toRem(1) solid rgba(0, 0, 0, 0.1)
+  }
+}
+.line-light {
+  @media (min-width:$mobile){
+    border-bottom: toRem(1) solid rgba(255, 255, 255, 0.1)
+  }
+}
+
+// == block of titles =====================
+.block-title {
+  @include adaptiveValue("margin-bottom", 50, 30,0,1920,768);
+  text-align: center;
+  // .block-title__title
+  &__title {
+  }
+	// .block-title__txt
+	&__txt {
+    @include adaptiveValue("margin-top", 30, 10,0,1920,768);
+	}
+}
+
+// == cards wrapper ==================
+.box-wrap {
+  border-radius: toRem(20);
+  background-color: white;
+  box-shadow: 0px 5px 30px 0px #D4E5F0;
+}
+
+// == grid block ===========================
+.grid-block {
+  display: grid;
+  @media (min-width:$mobile){
+    grid-template-columns: 1fr 59.6%;
+  }
+  @media (max-width:$mobile){
+     grid-template-columns: 1fr; 
+  }
+}
+
+
+// == SECTION COST-FORM =======================================
+.cost-form {
+  // .cost-form__container
+  &__container {
+    position: relative;
+    @media (min-width:$mobile){
+       column-gap: toRem(20); 
+       grid-template-columns: 39% 1fr;
+    }
+  }
+  // .cost-form__bg
+  &__bg {
+    position: absolute;
+    z-index: 0;
+    img {
+      height: auto;
+      position: absolute;
+    }
+    // .cost-form__bg_01
+    &_01 {
+      top: 0;
+      right: toRem(20);
+      img {
+        @include adaptiveValue("width", 200,112,0,1920,480);
+        transform: rotate(190deg);
+        bottom: 0;
+        right: 0;
+      }
+    }
+    // .cost-form__bg_02
+    &_02 {
+      bottom: -2%;
+      left: 22%;
+      img {
+        @include adaptiveValue("width", 170,94,0,1920,480);
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  // .cost-form__photo
+  &__photo {
+    position: relative;
+    z-index: 1;
+    @media (max-width:$mobile){
+       justify-self: center; 
+    }
+  }
+  // .cost-form__image
+  &__image {
+    border-radius: 50%;
+    @include adaptiveValue("width", 314, 292,0,1920,1440);
+    @include adaptiveValue("height", 314, 292,0,1920,1440);
+    position: relative;
+    background-color: $gray-EB;
+    @media (min-width:$mobile){
+      margin-bottom: toRem(20);
+    }
+    @media (max-width:$mobile){
+       margin-bottom: toRem(40); 
+    }
+    &:before {
+      content:'';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      @media (min-width:$mobileSmall){
+        border: toRem(10) solid #FFF;
+      }
+      @media (max-width:$mobileSmall){
+         border: toRem(4) solid #fff; 
+      }
+    }
+    &:after {
+      content: '';
+      background-image: url(@img/icons/skew-lines.svg);
+      background-size: 100% 100%; 
+      position: absolute;
+      right: -9%;
+      bottom: 0;
+      @include adaptiveValue("width", 129, 120,0,1920,1440);
+      @include adaptiveValue("height", 90, 83,0,1920,1440);
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  // .cost-form__qoute
+  &__qoute {
+    @media (min-width:$mobile){
+      color: white;
+      text-align: center;
+      max-width: toRem(344);
+    }
+    @media (max-width:$mobile){
+       display: none; 
+    }
+  }
+  // .cost-form__body
+  &__body {
+    position: relative;
+    z-index: 1;
+  }
+  // .cost-form__title
+  &__title {
+    @include adaptiveValue("margin-bottom", 30, 10);
+  }
+  // .cost-form__txt
+  &__txt {
+    color: white;
+    @include adaptiveValue("margin-bottom", 50, 30);
+    @media (min-width:$mobileSmall){
+      max-width: toRem(536);
+    }
+  }
+  // .cost-form__form
+  &__form {
+  }
+}
+
+// == SECTION BRAND LINE MOVE TO =============================
+.trust-brand {
+  // .trust-brand__container
+  &__container {
+  }
+  // .trust-brand__title
+  &__title {
+  }
+  // .trust-brand__body
+  &__body {
+    overflow: hidden;
+    width: max-content;
+    display: flex;
+      // .trust-brand__body_01
+      &_01 {
+        @media (min-width:$mobileSmall){
+           margin-bottom: toRem(20); 
+        }
+        @media (max-width:$mobileSmall){
+           margin-bottom: toRem(10); 
+        }
+      }
+      // .trust-brand__body_02
+      &_02 {
+      }
+  }
+  // .trust-brand__list-1
+  &__list-1,
+  &__list-2 {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  &__list-1 {
+    animation: scroll 40s linear infinite;
+  }
+  &__list-2 {
+    flex-direction: row-reverse;
+    animation: scroll2 40s linear infinite;
+  }
+  // .trust-brand__item
+  &__item {
+    border-radius:50%;
+    background-color: $gray-F7;
+    @include adaptiveValue("width", 300, 225,2,1920,1440);
+    @include adaptiveValue("width", 225, 92,1439,480);
+    @include adaptiveValue("height", 300, 225,2,1920,1440);
+    @include adaptiveValue("height", 225, 92,1439,480);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    @media (max-width:$mobileSmall){
+       margin: 0 3px; 
+    }
+    img {
+      display: block;
+      @media (min-width:$mobileSmall){
+        max-width: 75%;
+      }
+      @media (max-width:$mobileSmall){
+         max-width: 70%; 
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scroll2 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

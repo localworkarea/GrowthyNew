@@ -1,0 +1,281 @@
+.footer {
+  background-color: #000;
+  position: relative;
+  .footer-grid {
+    display: grid;
+    @include adaptiveValue("column-gap", 136, 80,2,1920,1440);
+    @include adaptiveValue("column-gap", 80,40,3,1439,768);
+    @include adaptiveValue("padding-bottom", 80, 30);
+  }
+  // .footer__container
+  &__container {
+    position: relative;
+  }
+  // .footer__img
+	&__img {
+    position: absolute;
+    @media (min-width:$mobileSmall){
+      left: 20%;
+      top: 0;
+    }
+    @media (max-width:$mobileSmall){
+       bottom: 0;
+       right: 0;
+    }
+  }
+	// .footer__img-bg
+	&__img-bg {
+    position: absolute;
+    z-index: 0;
+    @include adaptiveValue("width", 208, 155,2,1920,1440);
+    @include adaptiveValue("width", 155, 85,3,1440,480);
+    height: auto;
+    @media (min-width:$mobileSmall){
+      top: toRem(50);
+      transform: translate(-50%, -100%);
+    }
+    @media (max-width:$mobileSmall){
+      bottom: toRem(30);
+      right: toRem(20);        
+    }
+	}
+  // .footer__top
+  &__top {
+    position: relative;
+    z-index: 1;
+    border-bottom: toRem(1) solid rgba(255, 255, 255, .1);
+    @media (min-width:$mobile){
+      grid-template-columns: 13% 1fr;
+    }
+    @media (max-width:$mobile) and (min-width: em(550.98)) {
+       grid-template-columns: 20% 1fr; 
+    }
+    @media (max-width: em(550.98)){
+        grid-template-columns: 1fr;
+    }
+  }
+  // .footer__logo
+  &__logo {
+    @media (max-width: em(550.98)){
+      padding-bottom: toRem(30);
+      margin-bottom: toRem(30);
+      border-bottom: toRem(1) solid rgba(255, 255, 255, 0.1);
+    }
+    img {
+      height: auto;
+      @media (min-width:em(550.98)){
+        max-width: 100%;
+      }
+      @media (max-width: em(550.98)){
+          max-width: toRem(318);
+          width: 100%;
+      }
+    }
+  }
+  // .footer__body
+  &__body {
+    display: grid;
+    @include adaptiveValue("column-gap", 80, 40,0,1920,1440);
+    @media (min-width:em(1200.98)){
+      grid-template-columns: auto 1fr 50%;
+    }
+    @media (max-width: em(1200.98)) and (min-width: em(768.98)){
+      grid-template-columns: 1fr 60%;
+    }
+    @media (max-width:$mobile){
+       grid-template-columns: 1fr; 
+    }
+  }
+  // .footer__nav
+  &__nav {
+    @media (max-width: em(1200.98)){
+        display: none;
+    }
+  }
+  // .footer__list
+  &__list {
+  }
+  // .footer__item
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: toRem(15);
+    }
+  }
+  // .footer__link
+  &__link {
+    color: #B2B2B2;
+    @include adaptiveValue("font-size", 18, 14,0,1920,1440);
+    font-weight: 500;
+    line-height: normal;
+    transition: color .3s ease;
+    @media (any-hover: hover){
+      &:hover{
+        color: white;
+      }
+    }
+  }
+  // .footer__maps-ibg
+  &__maps-ibg {
+    display: block;
+    overflow: hidden;
+    border-radius: toRem(20);
+    img {
+      transition: transform 1.5s linear;
+    }
+    &:hover{
+      img {
+        transform: scale(1.05);
+      }
+    }
+    @media (max-width:$mobile){
+      margin-bottom: toRem(30); 
+    }
+    @media (min-width:$mobileSmall){
+      padding-bottom: 34%;
+    }
+    @media (max-width:$mobileSmall){
+       padding-bottom: 56%; 
+    }
+  }
+  // .footer__contacts
+  &__contacts {
+  }
+  // .footer__address
+  &__address {
+    display: flex;
+    @media (min-width:em(1440.98)){
+      justify-content: space-between;
+    }
+    @media (min-width:$mobile){
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: toRem(5);
+      column-gap: toRem(10);
+    }
+    @media (max-width:$mobile){
+       flex-direction: column;
+       row-gap: toRem(15); 
+    }
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 40, 30,0,1920,768);
+    }
+  }
+  // .footer__contact
+  &__contact {
+    display: flex;
+    align-items: center;
+    gap: toRem(6);
+    text-wrap: nowrap;
+    color: #FFF;
+    // font-size: toRem(18);
+    @include adaptiveValue("font-size", 18, 14,0,1920,1440);
+    font-weight: 700;
+    line-height: normal;
+    @media (max-width:$mobile){
+       font-size: toRem(16) !important; 
+    }
+  }
+  // .footer__social
+  &__social {
+  }
+  // .footer__bottom
+  &__bottom {
+    position: relative;
+    z-index: 1;
+    @include adaptiveValue("padding-top", 40, 30,0,1920,550);
+    @include adaptiveValue("padding-bottom", 40, 30,0,1920,550);
+    @media (min-width:em(1440.98)){
+      grid-template-columns: 13% 1fr;
+    }
+    @media (max-width: em(1440.98)) and (min-width: em(480.98)){
+        grid-template-columns: auto 1fr;
+    }
+    @media (max-width:$mobileSmall){
+      grid-template-columns: 1fr;
+      row-gap: toRem(10);
+    }
+  }
+  // .footer__body-bottom
+  &__body-bottom {
+    display: flex;
+    gap: toRem(10);
+    @media (min-width:$mobileSmall){
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @media (max-width:$mobileSmall){
+       flex-direction: column; 
+       order: 1;
+    }
+  }
+  // .footer__policy
+  &__policy {
+    @media (max-width:$mobileSmall){
+       order: 2; 
+    }
+  }
+  // .footer__txt-btm
+  &__txt-btm {
+    color: #999AA3;
+    font-size: toRem(14);
+    font-weight: 400;
+    line-height: normal;
+  }
+  // .footer__btm-link
+  &__btm-link {
+    transition: color .3s ease;
+    @media (any-hover: hover){
+      &:hover{
+        color: white;
+      }
+    }
+  }
+}
+
+.social-footer {
+  // .social-footer__list
+  &__list {
+    display: grid;
+    @include adaptiveValue("gap", 18, 10);
+    @media (min-width:em(1100.98)){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: em(1100.98)){
+        grid-template-columns: 1fr;
+    }
+  }
+  // .social-footer__item
+  &__item {
+  }
+  // .social-footer__link
+  &__link {
+    height: toRem(80);
+    gap: toRem(15);
+
+    border-radius: toRem(20);
+    background-color: $black;
+    
+    color: $gray-F7;
+    font-size: toRem(16);
+    font-weight: 400;
+    line-height: normal;
+
+    transition: background-color .3s ease, color .3s ease;
+    
+    svg {
+      path {
+        transition: all .3s ease;
+      }
+    }
+    @media (any-hover: hover){
+      &:hover{
+        background-color: $gray-F7;
+        color: $mainColor;
+        path {
+          fill: $mainColor;
+        }
+      }
+    }
+  }
+}

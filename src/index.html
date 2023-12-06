@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="uk">
+	@@include('html/_head.htm',{
+	"title":"Main"
+	})
+	<body>
+		<div class="wrapper page-home">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="main pdd-b">
+					<div class="main__container">
+						<div class="main__bg">
+							<img src="@img/elem/main.png" alt="decor">
+						</div>
+						<div class="main__body">
+							<h1 class="main__title title-main">
+								<span class="title-main__accent">Вирішуємо маркетингові задачі клієнтів</span><br>
+								<span class="title-main__accent-2">за допомогою<br>
+									digital-інструментів</span>
+							</h1>
+							<ul data-da=".home-what__counter,768,0" data-watch data-watch-once class="main__indicators indicators-main">
+								<li class="indicators-main__item">
+									<div class="indicators-main__numb">
+										<span data-digits-counter data-initial-value="114" class="indicators-main__counter">114</span>
+									</div>
+									<p class="indicators-main__txt txt-two">активних<br>
+										проектів</p>
+								</li>
+								<li class="indicators-main__item">
+									<div class="indicators-main__numb">
+										<span data-digits-counter data-initial-value="260600" data-digits-counter-format="" class="indicators-main__counter">260600</span>$
+									</div>
+									<p class="indicators-main__txt txt-two">середньомісячний<br>
+										спенд</p>
+								</li>
+								<li class="indicators-main__item">
+									<div class="indicators-main__numb">
+										<span data-digits-counter data-initial-value="93" class="indicators-main__counter">93</span>%
+									</div>
+									<p class="indicators-main__txt txt-two">клієнтів продовжують<br>
+										з нами роботу</p>
+								</li>
+								<li class="indicators-main__item">
+									<div class="indicators-main__numb">
+										<span data-digits-counter data-initial-value="32" class="indicators-main__counter">32</span>
+									</div>
+									<p class="indicators-main__txt txt-two">фахівця<br>
+										в команді</p>
+								</li>
+							</ul>
+							<div class="main__btn-mob">
+								<a href="#" class="main__btn btn btn_01">Переглянути кейси</a>
+								<a href="#" class="main__btn btn btn_02">Отримати консультацію</a>
+							</div>
+							<div class="main__services services-main">
+								<ul class="services-main__list">
+									<li class="services-main__item">
+										<h3 class="services-main__title txt-three">
+											Таргетована<br> реклама
+										</h3>
+										<p class="services-main__txt">
+											Завдяки надійним та інноваційним продуктам та послугам, кваліфікованим співробітникам і відповідальному ставленню до бізнесу та продуктів харчування
+										</p>
+										<a href="#" class="services-main__btn btn btn_01">Переглянути кейси</a>
+										<a href="#" class="services-main__btn btn btn_02">Отримати консультацію</a>
+									</li>
+									<li class="services-main__item">
+										<h3 class="services-main__title txt-three">
+											Google<br> реклама
+										</h3>
+										<p class="services-main__txt">
+											Незмінно пропонується широкий вибір неперервної інтеграції: кімнатні й садові рослини, розробка програмного забезпечення і підприємницька діяльність для Киян і домашніх улюбленців
+										</p>
+										<a href="#" class="services-main__btn btn btn_01">Переглянути кейси</a>
+										<a href="#" class="services-main__btn btn btn_02">Отримати консультацію</a>
+									</li>
+									<li class="services-main__item">
+										<h3 class="services-main__title txt-three">
+											SEO<br> просування
+										</h3>
+										<p class="services-main__txt">
+											Мета підприємства проста: це забезпечення вам новаторства, відкриттів та зберігання даних
+										</p>
+										<a href="#" class="services-main__btn btn btn_01">Переглянути кейси</a>
+										<a href="#" class="services-main__btn btn btn_02">Отримати консультацію</a>
+									</li>
+									<li class="services-main__item">
+										<h3 class="services-main__title txt-three">
+											Розробка<br> сайтів
+										</h3>
+										<p class="services-main__txt">
+											Хочемо підкорювати стильних особистостей якістю глобального громадянства і прагнемо розвивати закупівлю-продаж
+										</p>
+										<a href="#" class="services-main__btn btn btn_01">Переглянути кейси</a>
+										<a href="#" class="services-main__btn btn btn_02">Отримати консультацію</a>
+									</li>
+									<li class="services-main__item services-main__item_other">
+										<h3 class="services-main__title txt-three">
+											Всі<br> послуги
+										</h3>
+										<a href="#" class="services-main__btn-3 btn-arrow btn-arrow_01">
+											<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M60 30C60 46.56 46.53 60 30 60L29.1607 59.9885C12.9883 59.5435 0 46.2793 0 30C0 13.47 13.44 0 30 0C46.53 0 60 13.47 60 30ZM24.0587 18C23.1887 18.9 23.1887 20.31 24.0887 21.18L32.9387 30L24.0887 38.82C23.1887 39.69 23.1887 41.13 24.0587 42C24.9587 42.9 26.3687 42.9 27.2387 42L37.7087 31.59C38.1287 31.17 38.3687 30.6 38.3687 30C38.3687 29.4 38.1287 28.83 37.7087 28.41L27.2387 18C26.8187 17.55 26.2487 17.34 25.6787 17.34C25.0787 17.34 24.5087 17.55 24.0587 18Z" fill="#FFA132"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="main__btn-mob-02 bg-blue">
+								<a href="#" class="main__btn btn btn_03">Всі послуги</a>
+								<a href="#" class="main__btn btn btn_04">Переглянути кейси</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="home-what bg-gray pdd-t pdd-b">
+					<div class="home-what__container">
+						<div class="home-what__block line-dark grid-block">
+							<h2 class="home-what__title title-big">Що це таке?</h2>
+							<p class="home-what__sub-title title-big title-big_accent">Growth Digital Marketing</p>
+						</div>
+						<div class="home-what__block grid-block">
+							<p class="home-what__txt txt-one">Це підхід до розвитку бізнесу, який сфокусований на швидкому навчанні, перевірці максимально великої кількості гіпотез і безперервному вдосконаленні</p>
+						</div>
+						<div class="home-what__counter">
+							<div class="home-what__bg">
+								<img data-src="@img/elem/main-2.png" alt="decor">
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="home-projects pdd-b pdd-t">
+					<div class="home-projects__container">
+						<div class="home-projects__title block-title">
+							<h2 class="block-title__title title-big title-big_accent">Наші проєкти</h2>
+						</div>
+						<div class="home-projects__projects projects-home">
+							<article class="projects-home__item">
+								<a href="#" class="projects-home__link-ibg">
+									<img data-src="files/shark-1.gif" alt="shark">
+								</a>
+								<div class="projects-home__body">
+									<h3 class="projects-home__title title-two">Shark Taxi</h3>
+									<ul class="projects-home__list">
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Заявки</p>
+											<p class="projects-home__sub-name txt-five">1345</p>
+										</li>
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Ніша</p>
+											<p class="projects-home__sub-name txt-five">таксі</p>
+										</li>
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Ціна заявки</p>
+											<p class="projects-home__sub-name txt-five">456 грн</p>
+										</li>
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Гео</p>
+											<p class="projects-home__sub-name txt-five">Україна</p>
+										</li>
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Період</p>
+											<p class="projects-home__sub-name txt-five">4 місяці</p>
+										</li>
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Послуга</p>
+											<p class="projects-home__sub-name txt-five">таргетована реклама</p>
+										</li>
+									</ul>
+									<a href="#" class="projects-home__btn btn-arrow btn-arrow_02">
+										<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M40 20C40 31.04 31.02 40 20 40L19.4405 39.9923C8.65884 39.6957 0 30.8529 0 20C0 8.98 8.96 0 20 0C31.02 0 40 8.98 40 20ZM16.04 12C15.46 12.6 15.46 13.54 16.06 14.12L21.96 20L16.06 25.88C15.46 26.46 15.46 27.42 16.04 28C16.64 28.6 17.58 28.6 18.16 28L25.14 21.06C25.42 20.78 25.58 20.4 25.58 20C25.58 19.6 25.42 19.22 25.14 18.94L18.16 12C17.88 11.7 17.5 11.56 17.12 11.56C16.72 11.56 16.34 11.7 16.04 12Z" fill="#FFA132"/>
+										</svg>
+									</a>
+								</div>
+							</article>
+							<article class="projects-home__item">
+								<a href="#" class="projects-home__link-ibg">
+									<img data-src="files/shark-2.gif" alt="shark">
+								</a>
+								<div class="projects-home__body">
+									<h3 class="projects-home__title title-two">Shark Taxi</h3>
+									<ul class="projects-home__list">
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Заявки</p>
+											<p class="projects-home__sub-name txt-five">1345</p>
+										</li>
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Ніша</p>
+											<p class="projects-home__sub-name txt-five">таксі</p>
+										</li>
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Ціна заявки</p>
+											<p class="projects-home__sub-name txt-five">456 грн</p>
+										</li>
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Гео</p>
+											<p class="projects-home__sub-name txt-five">Україна</p>
+										</li>
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Період</p>
+											<p class="projects-home__sub-name txt-five">4 місяці</p>
+										</li>
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Послуга</p>
+											<p class="projects-home__sub-name txt-five">таргетована реклама</p>
+										</li>
+									</ul>
+									<a href="#" class="projects-home__btn btn-arrow btn-arrow_02">
+										<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M40 20C40 31.04 31.02 40 20 40L19.4405 39.9923C8.65884 39.6957 0 30.8529 0 20C0 8.98 8.96 0 20 0C31.02 0 40 8.98 40 20ZM16.04 12C15.46 12.6 15.46 13.54 16.06 14.12L21.96 20L16.06 25.88C15.46 26.46 15.46 27.42 16.04 28C16.64 28.6 17.58 28.6 18.16 28L25.14 21.06C25.42 20.78 25.58 20.4 25.58 20C25.58 19.6 25.42 19.22 25.14 18.94L18.16 12C17.88 11.7 17.5 11.56 17.12 11.56C16.72 11.56 16.34 11.7 16.04 12Z" fill="#FFA132"/>
+										</svg>
+									</a>
+								</div>
+							</article>
+							<article class="projects-home__item">
+								<a href="#" class="projects-home__link-ibg">
+									<img data-src="files/shark-1.gif" alt="shark">
+								</a>
+								<div class="projects-home__body">
+									<h3 class="projects-home__title title-two">Shark Taxi</h3>
+									<ul class="projects-home__list">
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Заявки</p>
+											<p class="projects-home__sub-name txt-five">1345</p>
+										</li>
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Ніша</p>
+											<p class="projects-home__sub-name txt-five">таксі</p>
+										</li>
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Ціна заявки</p>
+											<p class="projects-home__sub-name txt-five">456 грн</p>
+										</li>
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Гео</p>
+											<p class="projects-home__sub-name txt-five">Україна</p>
+										</li>
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Період</p>
+											<p class="projects-home__sub-name txt-five">4 місяці</p>
+										</li>
+										<li class="projects-home__li">
+											<p class="projects-home__name txt-four">Послуга</p>
+											<p class="projects-home__sub-name txt-five">таргетована реклама</p>
+										</li>
+									</ul>
+									<a href="#" class="projects-home__btn btn-arrow btn-arrow_02">
+										<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M40 20C40 31.04 31.02 40 20 40L19.4405 39.9923C8.65884 39.6957 0 30.8529 0 20C0 8.98 8.96 0 20 0C31.02 0 40 8.98 40 20ZM16.04 12C15.46 12.6 15.46 13.54 16.06 14.12L21.96 20L16.06 25.88C15.46 26.46 15.46 27.42 16.04 28C16.64 28.6 17.58 28.6 18.16 28L25.14 21.06C25.42 20.78 25.58 20.4 25.58 20C25.58 19.6 25.42 19.22 25.14 18.94L18.16 12C17.88 11.7 17.5 11.56 17.12 11.56C16.72 11.56 16.34 11.7 16.04 12Z" fill="#FFA132"/>
+										</svg>
+									</a>
+								</div>
+							</article>
+						</div>
+						<a href="#" class="home-projects__link btn btn_02">Всі проєкти</a>
+					</div>
+				</section>
+				<section class="home-why bg-blue pdd-b pdd-t">
+					<div class="home-why__container grid-block">
+						<div class="home-why__main">
+							<h2 class="home-why__title title-big">Чому це працює?</h2>
+						</div>
+						<div class="home-why__body">
+							<p class="home-why__sub-title title-big title-big_accent-2">
+								Ми працюємо на стику маркетингу, продукту, UX, технологій просування та розвитку клієнтів
+							</p>
+							<ul class="home-why__why why-home">
+								<li class="why-home__li">
+									<h3 class="why-home__title txt-six">Аналітика</h3>
+									<p class="why-home__txt txt-seven">
+										Вся діяльність повинна базуватися на веб-аналітиці. Це невід'ємна частина трансформації, тому їй приділяється досить багато уваги.
+									</p>
+								</li>
+								<li class="why-home__li">
+									<h3 class="why-home__title txt-six">Тестування</h3>
+									<p class="why-home__txt txt-seven">
+										Відсутність прив'язаності до певних інструментів, як наслідок, відсутність страху перед новими методами та інструментами трафікогенераціі.
+									</p>
+								</li>
+								<li class="why-home__li">
+									<h3 class="why-home__title txt-six">
+										Економія
+									</h3>
+									<p class="why-home__txt txt-seven">
+										Вся діяльність повинна базуватися на веб-аналітиці. Це невід'ємна частина трансформації, тому їй приділяється досить багато уваги.
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="home-services pdd-b pdd-t">
+					<div class="home-services__container">
+						<div class="home-services__title block-title">
+							<h2 class="block-title__title title-big title-big_accent">Наші послуги</h2>
+						</div>
+						<div data-tabs="1023" data-tabs-animate="500" class="home-services__tabs tabs-servs">
+							<nav data-tabs-titles class="tabs-servs__nav box-wrap">
+								<button type="button" class="tabs-servs__title _tab-active">Таргетована реклама</button>
+								<button type="button" class="tabs-servs__title">Google реклама</button>
+								<button type="button" class="tabs-servs__title">SEO просування</button>
+								<button type="button" class="tabs-servs__title">Розробка сайтів</button>
+								<button type="button" class="tabs-servs__title">SMM просування</button>
+								<button type="button" class="tabs-servs__title">Просування застосунків</button>
+								<button type="button" class="tabs-servs__title">Growth Marketing</button>
+							</nav>
+							<div data-tabs-body class="tabs-servs__content">
+								<div class="tabs-servs__body">
+									<ul class="tabs-servs__lists">
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Тергетована реклама
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Таргетована реклама в FaceBook
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Таргетована реклама в Instagram
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Таргетована реклама в LinkedIn
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Таргетована реклама в TikTok
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Налаштування pixel Facebook
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Налаштування Бізнес менеджера Facebook
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Аудит рекламного кабінета Facebook
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="tabs-servs__body">
+									<ul class="tabs-servs__lists">
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Контекстна реклама в пошуку Google
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Реклама на сайтах
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Google Shopping 
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Реклама в App
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Реклама в YouTube
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Реклама на Google Maps
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Аудит рекламного кабінета Google Ads
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="tabs-servs__body">
+									<ul class="tabs-servs__lists">
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													SEO просування сайта
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Просування точки Google Maps
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Підбір семантичного ядра
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Контент-маркетинг
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Внутрішня оптимізація сайта
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Закупка посилань на сайт 
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													SEO - аудит
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="tabs-servs__body">
+									<ul class="tabs-servs__lists">
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Розробка сайтів
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Розробка дизайну сайта
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Верстка сайта
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Підключення та розробка адмін панелі
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Налаштування аналітики Google Analytics
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Створення дашбордів в LookerStudio
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													UX UI аудит сайта
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="tabs-servs__body">
+									<ul class="tabs-servs__lists">
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Розробка смм стратегії
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Аудит та аналіз соцмереж
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Розробка контент-плану
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Ведення Instagram
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Ведення Facebook
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Ведення TikTok
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Ведення Linkedin
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="tabs-servs__body">
+									<ul class="tabs-servs__lists">
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													ASO для застосунка
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Apple Serch Ads
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Просування застосунків (android/ios) Google Ads
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Таргетована реклама для застосунків в соцмережах
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="tabs-servs__body">
+									<ul class="tabs-servs__lists">
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Пошук маркетингової зв'язки
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Ресьорч вашої ніші
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Розробка маркетинг стратегії
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Розробка digital стратегії
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Бренд стратегія
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Перформенс маркетинг
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Інструменти
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Розробка креативів для реклами 
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Відеореклама
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+										<li class="tabs-servs__item box-wrap">
+											<a href="#" class="tabs-servs__link">
+												<span class="tabs-servs__txt txt-three">
+													Медійна реклама
+												</span>
+												<img class="tabs-servs__img-arr" data-src="@img/icons/arr.svg" alt="arrow">
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="home-cost">
+					@@include('html/_form-cost.htm',{})
+				</section>
+				<section class="home-blog bg-gray pdd-b pdd-t">
+					<div class="home-blog__container">
+						<div class="home-blog__title block-title">
+							<h2 class="block-title__title title-big title-big_accent">Публікації</h2>
+						</div>
+						<ul class="home-blog__blog blog-home">
+							<li class="blog-home__item">
+								<a href="#" class="blog-home__link-ibg">
+									<img data-src="@img/blog/1.jpg" alt="img">
+								</a>
+								<div class="blog-home__body">
+									<h3 class="blog-home__title txt-nine">Чотка інтеграція Алло з Чотким Пацой</h3>
+									<div class="blog-home__footer">
+										<div class="blog-home__block">
+											<p class="blog-home__category txt-mac-03">Блог</p>
+											<p class="blog-home__time txt-mac-03">30 жовтня 2023</p>
+										</div>
+										<div class="blog-home__arrow">
+											<img data-src="@img/icons/arr-2.svg" alt="arrow">
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="blog-home__item">
+								<a href="#" class="blog-home__link-ibg">
+									<img data-src="@img/blog/2.jpg" alt="img">
+								</a>
+								<div class="blog-home__body">
+									<h3 class="blog-home__title txt-nine">Реклама нової фічі OLX на YouTube</h3>
+									<div class="blog-home__footer">
+										<div class="blog-home__block">
+											<p class="blog-home__category txt-mac-03">Блог</p>
+											<p class="blog-home__time txt-mac-03">30 жовтня 2023</p>
+										</div>
+										<div class="blog-home__arrow">
+											<img data-src="@img/icons/arr-2.svg" alt="arrow">
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="blog-home__item">
+								<a href="#" class="blog-home__link-ibg">
+									<img data-src="@img/blog/3.jpg" alt="img">
+								</a>
+								<div class="blog-home__body">
+									<h3 class="blog-home__title txt-nine">Як ми створили віртуального Позитива</h3>
+									<div class="blog-home__footer">
+										<div class="blog-home__block">
+											<p class="blog-home__category txt-mac-03">Блог</p>
+											<p class="blog-home__time txt-mac-03">30 жовтня 2023</p>
+										</div>
+										<div class="blog-home__arrow">
+											<img data-src="@img/icons/arr-2.svg" alt="arrow">
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="blog-home__item">
+								<a href="#" class="blog-home__link-ibg">
+									<img data-src="@img/blog/4.jpg" alt="img">
+								</a>
+								<div class="blog-home__body">
+									<h3 class="blog-home__title txt-nine">Як побудувати успішне бренд-ком’юніті</h3>
+									<div class="blog-home__footer">
+										<div class="blog-home__block">
+											<p class="blog-home__category txt-mac-03">Блог</p>
+											<p class="blog-home__time txt-mac-03">30 жовтня 2023</p>
+										</div>
+										<div class="blog-home__arrow">
+											<img data-src="@img/icons/arr-2.svg" alt="arrow">
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="blog-home__item">
+								<a href="#" class="blog-home__link-ibg">
+									<img data-src="@img/blog/5.jpg" alt="img">
+								</a>
+								<div class="blog-home__body">
+									<h3 class="blog-home__title txt-nine">Рекламні інтеграції на YouTube як окремий вид мистецтва</h3>
+									<div class="blog-home__footer">
+										<div class="blog-home__block">
+											<p class="blog-home__category txt-mac-03">Блог</p>
+											<p class="blog-home__time txt-mac-03">30 жовтня 2023</p>
+										</div>
+										<div class="blog-home__arrow">
+											<img data-src="@img/icons/arr-2.svg" alt="arrow">
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="home-trust">
+					<div class="trust-brand pdd-b pdd-t">
+						<div class="trust-brand__container">
+							<div class="trust-brand__title block-title">
+								<h2 class="block-title__title title-big title-big_accent">Нам довіряють</h2>
+								<p class="block-title__txt txt-eight">
+									Більше 15 відомих компанії в різних галузях бізнесу
+								</p>
+							</div>
+						</div>
+						<div class="trust-brand__body trust-brand__body_01">
+							<ul class="trust-brand__list-1">
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-1.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-2.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-4.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-5.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-6.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-7.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-8.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-9.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-10.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-11.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-12.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-13.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-14.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-15.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-16.svg" alt="brand">
+								</li>
+							</ul>
+						</div>
+						<div class="trust-brand__body trust-brand__body_02">
+							<ul class="trust-brand__list-2">
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-1.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-2.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-4.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-5.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-6.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-7.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-8.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-9.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-10.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-11.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-12.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-13.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-14.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-15.svg" alt="brand">
+								</li>
+								<li class="trust-brand__item">
+									<img data-src="@img/brands/brand-16.svg" alt="brand">
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

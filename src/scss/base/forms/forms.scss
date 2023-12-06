@@ -1,0 +1,142 @@
+//<INPUT>
+// Сніппет (HTML): inp
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.input {
+	border-radius: toRem(18);
+	width: 100%;
+	height: toRem(70);
+	display: block;
+	background: #fff;
+	
+	color: $gray-87;
+	font-size: toRem(16);
+	font-weight: 400;
+	line-height: 1.35;
+	
+	outline: none;
+	&._form-focus {
+	}
+	&._form-error {
+	}
+	@media (min-width:em(1200.98)){
+		padding: toRem(24) toRem(30);
+	}
+	@media (max-width: em(1200.98)){
+		padding: toRem(24) toRem(20);
+	}
+}
+.input[placeholder]:not([data-placeholder-nohiden]) {
+	&::placeholder {
+		transition: opacity 0.3s;
+	}
+	&:focus::placeholder {
+		opacity: 0;
+	}
+}
+
+textarea.input {
+	resize: none;
+	padding: 0px 0px;
+}
+
+.form {
+	// .form__button
+	&__button {
+		border-radius: toRem(18) !important;
+		font-size: toRem(18);
+		font-weight: 500;
+		line-height: 1.35;
+	}
+}
+
+.form__error {
+	color: red;
+  @include adaptiveValue("font-size", 16, 10);
+  font-weight: 400;
+  line-height: normal;
+}
+
+.form-first {
+  // .form-first__form
+  &__form {
+		display: grid;
+		gap: toRem(10);
+		@media (min-width:em(1023.98)){
+			grid-template-columns: repeat(3, 1fr);
+			align-items: end;
+		}
+		@media (max-width: em(1023.98)){
+			grid-template-columns: 1fr;			  
+		}
+  }
+  // .form-first__item
+  &__item {
+		position: relative;
+		.form__error {
+			position: absolute;
+			bottom: toRem(3);
+	    right: 5%;
+		}
+  }
+  // .form-first__label
+  &__label {
+		@media (min-width:$mobileSmall){
+			margin-bottom: toRem(10);
+			display: block;
+		}
+		@media (max-width:$mobileSmall){
+			 display: none; 
+		}
+  }
+  // .form-first__input
+  &__input {
+
+  }
+  // .form-first__button
+  &__button {
+		height: toRem(70);
+  }
+}
+
+// <BUTTONS>
+// Сніппет (HTML): btn
+// @import "button";
+
+// <INPUTS>
+// Сніппет (HTML): inp
+// @import "input";
+
+// <CHECK>
+// Сніппет (HTML): chk
+// @import "checkbox";
+
+// <RADIO>
+// Сніппет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Сніппет (HTML): sel
+// @import "select";
+
+// <RATING>
+// Сніппет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Сніппет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Сніппет (HTML):
+// @import "range";
+
+// <CALENDAR>
+// Сніппет (HTML):
+// @import "datepicker";
