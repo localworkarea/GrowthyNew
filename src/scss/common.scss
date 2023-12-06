@@ -177,6 +177,10 @@
   font-weight: 700;
   line-height: normal;
 }
+.title-three {
+  @include adaptiveValue("font-size", 50, 30);
+  font-weight: 700;
+}
 
 .txt-one {
   @include adaptiveValue("font-size", 40, 30,2,1920,1440);
@@ -221,6 +225,11 @@
 }
 .txt-nine {
   @include adaptiveValue("font-size", 24, 22);
+  font-weight: 700;
+  line-height: normal;
+}
+.txt-ten {
+  @include adaptiveValue("font-size", 22, 10);
   font-weight: 700;
   line-height: normal;
 }
@@ -404,6 +413,60 @@
   }
 }
 
+// == SECTION FORM-TWO =======================================
+.form-two {
+  // .form-two__container
+  &__container {
+  }
+  // .form-two__block
+  &__block {
+    display: flex;
+    row-gap: toRem(78);
+    @media (min-width:$mobile){
+      padding-right: toRem(20); 
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @media (max-width:$mobile){
+       flex-direction: column-reverse; 
+       margin-bottom: toRem(20);
+    }
+  }
+  // .form-two__title
+  &__title {
+ 
+  }
+  // .form-two__bottom
+  &__bottom {
+    max-width: toRem(345);
+  }
+  // .form-two__logo
+  &__logo {
+    max-width: 100%;
+    @media (min-width:$mobileSmall){
+       margin-bottom: toRem(10); 
+    }
+    @media (max-width:$mobileSmall){
+       margin-bottom: toRem(20); 
+    }
+  }
+  // .form-two__txt-01
+  &__txt-01 {
+    color: white;
+  }
+  // .form-two__body
+  &__body {
+  }
+  // .form-two__sub-title
+  &__sub-title {
+    @include adaptiveValue("margin-bottom", 60, 40);
+  }
+  // .form-two__form
+  &__form {
+  }
+}
+
+
 // == SECTION BRAND LINE MOVE TO =============================
 .trust-brand {
   // .trust-brand__container
@@ -411,6 +474,13 @@
   }
   // .trust-brand__title
   &__title {
+    .block-title__txt {
+      @media (max-width:$mobileSmall){
+        max-width: toRem(280);
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
   // .trust-brand__body
   &__body {
@@ -448,9 +518,9 @@
     border-radius:50%;
     background-color: $gray-F7;
     @include adaptiveValue("width", 300, 225,2,1920,1440);
-    @include adaptiveValue("width", 225, 92,1439,480);
+    @include adaptiveValue("width", 225, 92,3,1439,480);
     @include adaptiveValue("height", 300, 225,2,1920,1440);
-    @include adaptiveValue("height", 225, 92,1439,480);
+    @include adaptiveValue("height", 225, 92,3,1439,480);
     display: flex;
     align-items: center;
     justify-content: center;
