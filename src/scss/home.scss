@@ -410,6 +410,11 @@
     border-radius: toRem(20);
     overflow: hidden;
     @include adaptiveValue("margin-bottom", 40, 15,0,1920,480);
+    video {
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+    }
     @media (min-width:em(650.98)){
       padding-bottom: 61%;
     }

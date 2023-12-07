@@ -1092,6 +1092,13 @@ textarea.input {
   overflow: hidden;
 }
 
+.projects-home__link-ibg video {
+  position: absolute;
+  inset: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .projects-home__body {
   display: -webkit-box;
   display: -ms-flexbox;
