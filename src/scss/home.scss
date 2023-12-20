@@ -900,3 +900,103 @@
 // --- HOME-FORM SECTION -------------------------------------
 .home-form {
 }
+
+// -------------------------------------------
+// === SERVICES PAGE =================================================
+// -------------------------------
+
+// --- SERV-ALL SECTION ------------------------------------
+.serv-all {
+  // .serv-all__container
+  &__container {
+    position: relative;
+  }
+  // .serv-all__bg
+  &__bg-ibg-contain {
+    position: absolute;
+    z-index: -1;
+    @media (min-width:em(700.98)){
+      inset: 0;
+    }
+    @media (max-width: em(700.98)){
+      top: toRem(60);
+      left: 0;
+      width: 100%;
+      padding-bottom: 100%;        
+    }
+    @media (max-width:$mobileSmall){
+      padding-bottom: 125%;  
+    }
+    img {
+      @media (max-width:$mobileSmall){
+         object-fit: cover !important; 
+      }
+    }
+  }
+  // .serv-all__title
+  &__title {
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+  // .serv-all__summary
+  &__summary {
+    @media (min-width:$mobileSmall){
+      margin-bottom: toRem(20);
+    }
+    @media (max-width:$mobileSmall){
+       display: flex;
+       align-items: center;
+       justify-content: space-between; 
+       &._spoller-active {
+        svg {
+          transform: rotate(0deg);
+        }
+       }
+    }
+    svg {
+      @media (min-width:$mobileSmall){
+         display: none; 
+      }
+      @media (max-width:$mobileSmall){
+         transform: rotate(180deg); 
+         transition: transform .3s ease;
+      }
+    }
+  }
+  // .serv-all__list
+  &__list {
+    display: grid;
+    @include adaptiveValue("gap", 20, 10);
+    @media (min-width:em(1024.98)){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: em(1024.98)){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: em(700.98)){
+        grid-template-columns: 1fr;
+    }
+  }
+  // .serv-all__item
+  &__item {
+    padding: toRem(30);
+    border-radius: 20px;
+    border: 2px solid rgba(61, 162, 255, 0.50);
+    background: rgba(255, 255, 255, 0.70);
+    backdrop-filter: blur(20px);
+  }
+  // .serv-all__body
+  &__body {
+    @media (max-width:$mobileSmall){
+       margin-top: toRem(20); 
+    }
+  }
+}
+
+.body-all-serv {
+  // .body-all-serv__list
+  &__list {
+  }
+  // .body-all-serv__li
+  &__li {
+  }
+}

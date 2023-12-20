@@ -10,6 +10,67 @@
 @include adaptiveValue("padding-top", 105, 100,2,1920,1440);
 @include adaptiveValue("padding-top", 100, 54,3,1439,360);
 }
+
+// -- page navigation ================================
+.page-nav {
+  @media (min-width:$mobile){
+    margin: toRem(10) 0;
+  }
+  @media (max-width:$mobile){
+     display: none; 
+  }
+  // .page-nav__container
+  &__container {
+  }
+  // .page-nav__list
+  &__list {
+    @media (min-width:$mobile){
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  // .page-nav__item
+  &__item {
+    a {
+      @media (min-width:$mobile){
+        font-size: toRem(14);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.2;
+        position: relative;
+        transition: opacity .3s ease;
+      }
+      @media (any-hover: hover){
+        &:hover{
+          @media (min-width:$mobile){
+            opacity: 1;
+          }
+        }
+      }
+    }
+    &:not(:last-child) {
+      a {
+        @media (min-width:$mobile){
+          margin-right: toRem(3);
+        }
+        @media (min-width:$mobile){
+          &::after {
+            content:'/';
+            padding-left: toRem(3);
+          }
+        }
+      }
+    }
+  }
+  // .page-nav__link
+  &__link {
+  }
+}
+
+
+
+
 // hover with underline -----------------------------------
 ._hover-line {
   @media (min-width:$mobile){
@@ -231,6 +292,11 @@
 .txt-ten {
   @include adaptiveValue("font-size", 22, 10);
   font-weight: 700;
+  line-height: normal;
+}
+.txt-eleven {
+  @include adaptiveValue("font-size", 20, 16);
+  font-weight: 400;
   line-height: normal;
 }
 .txt-mac-01 {
