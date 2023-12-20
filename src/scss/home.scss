@@ -998,5 +998,15 @@
   }
   // .body-all-serv__li
   &__li {
+    a {
+      @media (min-width:$mobileSmall){
+         transition: color .3s ease; 
+      }
+      @media (any-hover: hover){
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
   }
 }

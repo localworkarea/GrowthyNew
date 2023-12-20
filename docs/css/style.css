@@ -1423,6 +1423,11 @@ textarea.input {
   .serv-all__summary svg {
     display: none;
   }
+
+  .body-all-serv__li a {
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
 }
 
 @media (min-width: 34.43625em) {
@@ -5143,5 +5148,9 @@ textarea.input {
   .tabs-servs__item:hover {
     -webkit-box-shadow: 0px 5px 30px 0px #8aabc1;
             box-shadow: 0px 5px 30px 0px #8aabc1;
+  }
+
+  .body-all-serv__li a:hover {
+    color: #3DA2FF;
   }
 }
