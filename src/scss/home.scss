@@ -907,8 +907,8 @@
 
 // --- SERV-ALL SECTION ------------------------------------
 .serv-all {
-  // .serv-all__container
-  &__container {
+  // .serv-all__container-sm
+  &__container-sm {
     position: relative;
   }
   // .serv-all__bg
@@ -966,10 +966,10 @@
   &__list {
     display: grid;
     @include adaptiveValue("gap", 20, 10);
-    @media (min-width:em(1024.98)){
+    @media (min-width:em(1440.98)){
       grid-template-columns: repeat(3, 1fr);
     }
-    @media (max-width: em(1024.98)){
+    @media (max-width: em(1440.98)){
       grid-template-columns: repeat(2, 1fr);
     }
     @media (max-width: em(700.98)){
@@ -979,10 +979,6 @@
   // .serv-all__item
   &__item {
     padding: toRem(30);
-    border-radius: 20px;
-    border: 2px solid rgba(61, 162, 255, 0.50);
-    background: rgba(255, 255, 255, 0.70);
-    backdrop-filter: blur(20px);
   }
   // .serv-all__body
   &__body {
@@ -998,6 +994,9 @@
   }
   // .body-all-serv__li
   &__li {
+    @include adaptiveValue("font-size", 20, 16,0,1920,1440);
+    font-weight: 400;
+    line-height: normal;
     a {
       @media (min-width:$mobileSmall){
          transition: color .3s ease; 
@@ -1008,5 +1007,263 @@
         }
       }
     }
+  }
+}
+
+
+// -------------------------------------------
+// === SERVICE ONE PAGE =================================================
+// -------------------------------
+
+// --- STEPS-SERVICE SECTION ------------------------------------
+.steps-service {
+  // .steps-service__container-sm
+  &__container-sm {
+  }
+  // .steps-service__title
+  &__title {
+  }
+  // .steps-service__body
+  &__body {
+    display: flex;
+    gap: toRem(20);
+    @media (max-width: em(1200.98)){
+        flex-direction: column;
+    }
+  }
+  // .steps-service__test
+  &__test {
+    border-radius: toRem(20);
+    @include adaptiveValue("padding", 50, 37,2,1920,1440);
+    @include adaptiveValue("padding", 37, 25,3,1439,360);
+  }
+  
+  // .steps-service__sub-title
+  &__sub-title {
+    color: white;
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+  // .steps-service__list
+  &__list {
+    .steps-service__period & {
+      @media (min-width:em(1200.98)){
+        display: flex;
+        flex: 1;
+      }
+    }
+    // .steps-service__list_test
+		&_test {
+      display: grid;
+      gap: toRem(20);
+      @media (min-width:$tablet){
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width:$tablet){
+        grid-template-columns: 1fr;
+      }
+		}
+  }
+  // .steps-service__li
+  &__li {
+    border-radius: toRem(20);
+    background-color: white;
+    @include adaptiveValue("padding", 30, 20,0,1920,1440);
+    @media (min-width:em(1200.98)){
+      flex: 1;
+    }
+  }
+  // .steps-service__li-title
+  &__li-title {
+    @include adaptiveValue("margin-bottom", 20, 10);
+  }
+  // .steps-service__sub-list
+  &__sub-list {
+    padding-left: toRem(16);
+  }
+  // .steps-service__sub-li
+  &__sub-li {
+    @include adaptiveValue("margin-bottom", 10, 6);
+    position: relative;
+    &::before {
+      content:'';
+      position: absolute;
+      top: toRem(8);
+      left: toRem(-16);
+      width: toRem(6);
+      height: toRem(6);
+      border-radius: 50%;
+      background-color: $blue;
+    }
+  }
+  // .steps-service__period
+  &__period {
+    border-radius: toRem(20);
+    @include adaptiveValue("padding", 50, 37,2,1920,1440);
+    @include adaptiveValue("padding", 37, 25,3,1439,360);
+    @media (min-width:em(1200.98)){
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    @media (min-width:em(1200.98)){
+      &:after {
+        content:'';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: -90%;
+        width: 100%;
+        height: 100%;
+        background-color: $blue;
+        border-radius: 0 toRem(20) toRem(20) 0;
+      }
+    }
+  }
+}
+
+// --- PROJECTS-SERVICE SECTION ------------------------------------
+.projects-service {
+  // .projects-service__container
+  &__container {
+  }
+  // .projects-service__title
+  &__title {
+  }
+  // .projects-service__projects
+  &__projects {
+  }
+  // .projects-service__link
+  &__link {
+    max-width: toRem(586);
+    margin: 0 auto;
+  }
+}
+
+// --- SPOLLERS-SERVICE SECTION ------------------------------------
+.spollers-service {
+  // .spollers-service__container
+  &__container {
+  }
+  // .spollers-service__name
+  &__name {
+  }
+  // .spollers-service__title
+  &__title {
+  }
+  // .spollers-service__body
+  &__body {
+  }
+  // .spollers-service__spollers
+  &__spollers {
+  }
+}
+
+
+.benefits-service {
+  // .benefits-service__container
+  &__container {
+  }
+  // .benefits-service__name
+  &__name {
+  }
+  // .benefits-service__title
+  &__title {
+  }
+  // .benefits-service__body
+  &__body {
+    position: relative;
+  }
+  	// .benefits-service__bg
+	&__bg {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media (min-width:em(550.98)){
+      width: 80%;
+    }
+    @media (max-width: em(550.98)){
+        width: 100%;
+    }
+  }
+	// .benefits-service__bg-ibg
+	&__bg-ibg {
+    padding-bottom: 100%;
+    transform: rotate(145deg);
+    @media (max-width: em(550.98)){
+      transform: rotate(145deg) scale(2);
+    }
+	}
+  // .benefits-service__list
+  &__list {
+    display: grid;
+    position: relative;
+    z-index: 1;
+    @include adaptiveValue("gap", 20, 10,0,1920,1440);
+    @media (min-width:em(550.98)){
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  // .benefits-service__item
+  &__item {
+    @include adaptiveValue("padding", 30, 20,0,1920,1440);
+    @include adaptiveValue("min-height", 342, 250,2,1920,1440);
+    @include adaptiveValue("min-height", 250, 200,3,1439,360);
+  }
+  // .benefits-service__num
+  &__num {
+    color: $blue;
+    @include adaptiveValue("margin-bottom", 20, 10,0,1920,1440);
+  }
+  // .benefits-service__sub-title
+  &__sub-title {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 20, 10,0,1920,1440);
+    } 
+  }
+  // .benefits-service__txt
+  &__txt {
+  }
+}
+
+.serv-service {
+  // .serv-service__container
+  &__container {
+  }
+  // .serv-service__name
+  &__name {
+  }
+  // .serv-service__title
+  &__title {
+  }
+  // .serv-service__body
+  &__body {
+  }
+  // .serv-service__list
+  &__list {
+    display: grid;
+    @include adaptiveValue("gap", 20, 10,0,1920,1440);
+    @media (min-width:em(1200.98)){
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  // .serv-service__item
+  &__item {
+    @include adaptiveValue("padding", 30, 20,0,1920,1440);
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(20);
+  }
+	// .serv-service__sub-title
+	&__sub-title {
+    flex: 1;
+	}
+  // .serv-service__txt
+  &__txt {
+  }
+  // .serv-service__link
+  &__link {
   }
 }

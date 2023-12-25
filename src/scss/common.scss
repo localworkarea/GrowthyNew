@@ -1,3 +1,8 @@
+[class*="__container-sm"] {
+  @include adaptiveValue("max-width", 1840, 1160,0,1920,1440);
+  padding-left:toRem(20);
+  padding-right:toRem(20);
+}
 // == Выстроить для смены порядка секций ==================
 .page-home {
   .page {
@@ -67,8 +72,6 @@
   &__link {
   }
 }
-
-
 
 
 // hover with underline -----------------------------------
@@ -209,11 +212,15 @@
 }
 
 // == paddings sections ----------------------
+.pdd-sect {
+  @include adaptiveValue("padding-top", 100, 60,0,1920,992);
+  @include adaptiveValue("padding-bottom", 100, 60,0,1920,992);
+}
 .pdd-t {
-  @include adaptiveValue("padding-top", 100, 60);
+  @include adaptiveValue("padding-top", 100, 60,0,1920,992);
 }
 .pdd-b {
-  @include adaptiveValue("padding-bottom", 100, 60);
+  @include adaptiveValue("padding-bottom", 100, 60,0,1920,992);
 }
 
 
@@ -230,6 +237,10 @@
   &_accent-2 {
     color: white;
   }
+   // .title-big_lh
+   &_lh {
+    line-height: 1.2
+   }
 }
 
 .title-two {
@@ -239,7 +250,8 @@
   line-height: normal;
 }
 .title-three {
-  @include adaptiveValue("font-size", 50, 30);
+  @include adaptiveValue("font-size", 50, 37,2,1920,1440);
+  @include adaptiveValue("font-size", 37, 30,3,1439,360);
   font-weight: 700;
 }
 
@@ -255,7 +267,8 @@
   line-height: normal;
 }
 .txt-three {
-  @include adaptiveValue("font-size", 36, 18);
+  @include adaptiveValue("font-size", 36,27,2,1920,1440);
+  @include adaptiveValue("font-size", 27, 18,3,1439,360);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -270,12 +283,12 @@
   font-weight: 700;
 }
 .txt-six {
-  @include adaptiveValue("font-size", 36, 26);
+  @include adaptiveValue("font-size", 36, 26,0,1920,1440);
   font-weight: 700;
   line-height: 1.2;
 }
 .txt-seven {
-  @include adaptiveValue("font-size", 22, 16);
+  @include adaptiveValue("font-size", 22, 16,0,1920,1440);
   font-weight: 400;
   line-height: 1.2;
 }
@@ -299,6 +312,11 @@
   font-weight: 400;
   line-height: normal;
 }
+.txt-twelve {
+  @include adaptiveValue("font-size", 30, 18);
+  font-weight: 700;
+  line-height: 1.2;
+}
 .txt-mac-01 {
   @include adaptiveValue("font-size", 18, 14,0,1920,1440);
   font-weight: 700;
@@ -313,6 +331,21 @@
   @include adaptiveValue("font-size", 16, 14,0,1920,1440);
   font-weight: 500;
   line-height: normal;
+}
+.txt-mac-04 {
+  @include adaptiveValue("font-size", 18, 14,0,1920,1440);
+  font-weight: 400;
+  line-height: normal;
+}
+.txt-mac-05 {
+  @include adaptiveValue("font-size", 28, 18,0,1920,1440);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.txt-mac-06 {
+  @include adaptiveValue("font-size", 18, 16,0,1920,1440);
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 // == LINES ON ALL PAGES =================================
@@ -347,6 +380,13 @@
   box-shadow: 0px 5px 30px 0px #D4E5F0;
 }
 
+.card-blur {
+  border-radius: toRem(20);
+  border: 2px solid rgba(61, 162, 255, 0.50);
+  background: rgba(255, 255, 255, 0.70);
+  backdrop-filter: blur(20px);
+}
+
 // == grid block ===========================
 .grid-block {
   display: grid;
@@ -358,6 +398,16 @@
   }
 }
 
+.pdd-rb {
+  @media (min-width:$mobile){
+    padding-right: toRem(20); 
+  }
+  @media (max-width:$mobile){
+     margin-bottom: toRem(20); 
+     position: relative;
+     z-index: 2;
+  }
+}
 
 // == SECTION COST-FORM =======================================
 .cost-form {
@@ -621,5 +671,81 @@
   }
   to {
     transform: translateX(0%);
+  }
+}
+
+// == SPOLLERS ===================================================
+.spollers {
+  // .spollers__item
+  &__item {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 20, 10,0,1920,1440);
+    }
+  }
+  // .spollers__summary
+  &__summary {
+    cursor: pointer;
+    border-radius: toRem(20);
+    @include adaptiveValue("padding-top", 26, 20,0,1920,1440);
+    @include adaptiveValue("padding-bottom", 26, 20,0,1920,1440);
+    @include adaptiveValue("padding-left", 40, 20,0,1920,1440);
+    @include adaptiveValue("padding-right", 40, 20,0,1920,1440);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: toRem(20);
+    &._spoller-active {
+      .spollers__button {
+        &::after {
+          width: 0;
+        }
+      }
+    }
+  }
+  // .spollers__title
+  &__title {
+    color: white;
+  }
+  // .spollers__button
+  &__button {
+    display: block;
+    flex: 0 0 auto;
+    @include adaptiveValue("width", 70, 30);
+    @include adaptiveValue("height", 70, 30);
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    &::before,
+    &::after {
+      content:'';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 55%;
+      height: toRem(2);
+      background-color: #000;
+      transition: width .3s ;
+      @media (max-width:$mobileSmall){
+         height: toRem(1); 
+      }
+    }
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+  // .spollers__body
+  &__body {
+    @include adaptiveValue("padding", 40, 20,0,1920,1440);
+  }
+  // .spollers__content
+  &__content {
+  }
+  // .spollers__sub-title
+  &__sub-title {
+    @include adaptiveValue("margin-bottom", 20, 10,0,1920,1440);
+  }
+  // .spollers__txt
+  &__txt {
   }
 }
