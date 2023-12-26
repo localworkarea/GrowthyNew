@@ -9,14 +9,18 @@
 			<main class="page">
 				<nav class="page-nav">
 					<div class="page-nav__container-sm">
-						<ul class="page-nav__list">
-							<li class="page-nav__item">
-								<a href="index.html" class="page-nav__link">Головна</a>
+						<ol itemscope itemtype="https://schema.org/BreadcrumbList" class="page-nav__list">
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="page-nav__item">
+								<a itemprop="item"  href="index.html">
+									<span itemprop="name">Головна</span>
+								</a>
+								<meta itemprop="position" content="1" />
 							</li>
-							<li class="page-nav__item">
-								<a href="services.html" class="page-nav__link">Всі послуги</a>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="page-nav__item">
+								<span itemprop="name">Всі послуги</span>
+								<meta itemprop="position" content="2" />
 							</li>
-						</ul>
+						</ol>
 					</div>
 				</nav>
 				<section class="serv-all pdd-sect">
@@ -28,7 +32,7 @@
 							Всі послуги
 						</h1>
 						<div data-spollers="480,max" class="serv-all__list">
-							<details class="serv-all__item card-blur">
+							<details data-open  class="serv-all__item card-blur">
 								<summary class="serv-all__summary">
 									<span class="txt-three">
 										Таргетована реклама
