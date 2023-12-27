@@ -12,8 +12,7 @@
 }
 // -- отступ от хедера на всех страницах.
 .page {
-@include adaptiveValue("padding-top", 105, 100,2,1920,1440);
-@include adaptiveValue("padding-top", 100, 54,3,1439,360);
+@include adaptiveValue("padding-top", 105, 80,0,1920,1440);
 }
 
 // -- page navigation ================================
@@ -206,25 +205,25 @@
 
 // == paddings sections ----------------------
 .pdd-sect {
-  @include adaptiveValue("padding-top", 100, 75,2,1920,1440);
-  @include adaptiveValue("padding-top", 75, 60,3,1439,768);
-  @include adaptiveValue("padding-bottom", 100, 75,2,1920,1440);
-  @include adaptiveValue("padding-bottom", 75, 60,3,1439,768);
+  @include adaptiveValue("padding-top", 100, 60,2,1920,1440);
+  @include adaptiveValue("padding-top", 60, 40,3,1439,768);
+  @include adaptiveValue("padding-bottom", 100, 60,2,1920,1440);
+  @include adaptiveValue("padding-bottom", 60, 40,3,1439,768);
 }
 .pdd-t {
-  @include adaptiveValue("padding-top", 100, 75,2,1920,1440);
-  @include adaptiveValue("padding-top", 75, 60,3,1439,768);
+  @include adaptiveValue("padding-top", 100, 60,2,1920,1440);
+  @include adaptiveValue("padding-top", 60, 40,3,1439,768);
 }
 .pdd-b {
-  @include adaptiveValue("padding-bottom", 100, 75,2,1920,1440);
-  @include adaptiveValue("padding-bottom", 75, 60,3,1439,768);
+  @include adaptiveValue("padding-bottom", 100, 60,2,1920,1440);
+  @include adaptiveValue("padding-bottom", 60, 40,3,1439,768);
 }
 
 
 // == TITLES and PARAGRAPHS ----------------------------------------
 .title-big {
-  @include adaptiveValue("font-size", 68, 51,2,1920,1440);
-  @include adaptiveValue("font-size", 51, 30,3,1439,360);
+  @include adaptiveValue("font-size", 68, 45,2,1920,1440);
+  @include adaptiveValue("font-size", 45, 30,3,1439,360);
   font-weight: 700;
   // .title-big_accent
   &_accent {
@@ -239,22 +238,27 @@
     line-height: 1.2
    }
 }
+.title-big-2 {
+  @include adaptiveValue("font-size", 68, 36,2,1920,1440);
+  @include adaptiveValue("font-size", 36, 30,3,1439,360);
+  font-weight: 700;
+}
 
 .title-two {
-  @include adaptiveValue("font-size", 48, 36,2,1920,1440);
-  @include adaptiveValue("font-size", 36, 20,3,1439,360);
+  @include adaptiveValue("font-size", 48, 32,2,1920,1440);
+  @include adaptiveValue("font-size", 32, 20,3,1439,360);
   font-weight: 700;
   line-height: normal;
 }
 .title-three {
-  @include adaptiveValue("font-size", 50, 37,2,1920,1440);
+  @include adaptiveValue("font-size", 50, 30,2,1920,1440);
   @include adaptiveValue("font-size", 37, 30,3,1439,360);
   font-weight: 700;
 }
 
 .txt-one {
-  @include adaptiveValue("font-size", 40, 30,2,1920,1440);
-  @include adaptiveValue("font-size", 30, 16,3,1439,360);
+  @include adaptiveValue("font-size", 40, 26,2,1920,1440);
+  @include adaptiveValue("font-size", 26, 16,3,1439,360);
   font-weight: 400;
   line-height: 1.2;
 }
@@ -264,8 +268,8 @@
   line-height: normal;
 }
 .txt-three {
-  @include adaptiveValue("font-size", 36,27,2,1920,1440);
-  @include adaptiveValue("font-size", 27, 18,3,1439,360);
+  @include adaptiveValue("font-size", 36,22,2,1920,1440);
+  @include adaptiveValue("font-size", 22, 18,3,1439,360);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -276,12 +280,13 @@
   line-height: normal;
 }
 .txt-five {
-  @include adaptiveValue("font-size", 26, 14);
+  @include adaptiveValue("font-size", 26, 18,2,1920,1440);
+  @include adaptiveValue("font-size", 18, 14,3,1439,480);
   font-weight: 700;
 }
 .txt-six {
   @include adaptiveValue("font-size", 36, 26,0,1920,1440);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
 }
 .txt-seven {
@@ -295,9 +300,9 @@
   line-height: normal;
 }
 .txt-nine {
-  @include adaptiveValue("font-size", 24, 22);
+  @include adaptiveValue("font-size", 24, 18,0,1920,1440);
   font-weight: 700;
-  line-height: normal;
+  line-height: 1.2;
 }
 .txt-ten {
   @include adaptiveValue("font-size", 22, 10);
@@ -406,10 +411,93 @@
   }
 }
 
+// == SECTION PROJECTS-HOME =======================================
+.projects-home {
+  display: grid;
+  @include adaptiveValue("gap", 20, 15,0,1920,1440);
+  @include adaptiveValue("margin-bottom", 50, 20);
+  @media (min-width:$tablet){
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width:$tablet){
+    grid-template-columns: repeat(2, 1fr);    
+  }
+  @media (max-width: em(650.98)){
+      grid-template-columns: 1fr;
+  }
+  // .projects-home__item
+  &__item {
+    border-radius: toRem(20);
+    background: #FFF;
+    overflow: hidden;
+    box-shadow: 0px 5px 30px 0px #D4E5F0;
+  }
+  // .projects-home__link-ibg
+  &__link-ibg {
+    display: block;
+    border-radius: toRem(20);
+    overflow: hidden;
+    @include adaptiveValue("margin-bottom", 20, 15,0,1920,1440);
+    video {
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+    }
+      padding-bottom: 45%;
+  }
+  // .projects-home__body
+  &__body {
+    @include adaptiveValue("padding-left", 40, 15,0,1920,1024);
+    @include adaptiveValue("padding-right", 40, 15,0,1920,1024);
+    @include adaptiveValue("padding-bottom", 40, 10,0,1920,1024);
+    display: flex;
+    flex-direction: column;
+  }
+  // .projects-home__title
+  &__title {
+    @include adaptiveValue("margin-bottom", 20, 10,0,1920,1440);
+  }
+  // .projects-home__list
+  &__list {
+    @include adaptiveValue("margin-bottom", 15, 10,0,1920,480);
+    @include adaptiveValue("gap", 30, 5,2,1920,992);
+    @media (min-width:$tablet){
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width:$tablet){
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: toRem(30);
+      row-gap: toRem(10);
+    }
+  }
+  // .projects-home__li
+  &__li {
+    @media (max-width:$tablet){
+      max-width: toRem(210);
+    }
+  }
+  // .projects-home__name
+  &__name {
+    @include adaptiveValue("margin-bottom", 10, 2);
+  }
+  // .projects-home__sub-name
+  &__sub-name {
+    color: $blue;
+    // word-break: break-all;
+  }
+  // .projects-home__btn
+  &__btn {
+    display: inline-block;
+    align-self: flex-end;
+  }
+}
+
 // == SECTION COST-FORM =======================================
 .cost-form {
   // .cost-form__container
-  &__container {
+  &__container-sm {
     position: relative;
     @media (min-width:$mobile){
        column-gap: toRem(20); 
@@ -418,31 +506,42 @@
   }
   // .cost-form__bg
   &__bg {
-    position: absolute;
-    z-index: 0;
-    img {
-      height: auto;
+    @media (min-width:$mobile){
       position: absolute;
+      z-index: 0;
+    }
+    @media (max-width:$mobile){
+       display: none; 
+    }
+    img {
+      @media (min-width:$mobile){
+        height: auto;
+        position: absolute;
+      }
     }
     // .cost-form__bg_01
     &_01 {
-      top: 0;
-      right: toRem(20);
-      img {
-        @include adaptiveValue("width", 200,112,0,1920,480);
-        transform: rotate(190deg);
-        bottom: 0;
-        right: 0;
+      @media (min-width:$mobile){
+        top: 0;
+        right: toRem(20);
+        img {
+          @include adaptiveValue("width", 200,112,0,1920,1440);
+          transform: rotate(190deg);
+          bottom: 0;
+          right: 0;
+        }
       }
     }
     // .cost-form__bg_02
     &_02 {
-      bottom: -2%;
-      left: 22%;
-      img {
-        @include adaptiveValue("width", 170,94,0,1920,480);
-        top: 0;
-        left: 0;
+      @media (min-width:$mobile){
+        bottom: -2%;
+        left: 22%;
+        img {
+          @include adaptiveValue("width", 170,94,0,1920,1440);
+          top: 0;
+          left: 0;
+        }
       }
     }
   }
@@ -450,15 +549,28 @@
   &__photo {
     position: relative;
     z-index: 1;
+    @media (max-width:$tablet){
+    }
+    @media (min-width:$mobile){
+        display: flex;
+    }
     @media (max-width:$mobile){
        justify-self: center; 
     }
   }
+	// .cost-form__photo-wr
+	&__photo-wr {
+    @media (min-width:$mobile){
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+    }
+	}
   // .cost-form__image
   &__image {
     border-radius: 50%;
-    @include adaptiveValue("width", 314, 292,0,1920,1440);
-    @include adaptiveValue("height", 314, 292,0,1920,1440);
+    @include adaptiveValue("width", 314, 260,0,1920,1440);
+    @include adaptiveValue("height", 314, 260,0,1920,1440);
     position: relative;
     background-color: $gray-EB;
     @media (min-width:$mobile){
@@ -630,10 +742,10 @@
   &__item {
     border-radius:50%;
     background-color: $gray-F7;
-    @include adaptiveValue("width", 300, 225,2,1920,1440);
-    @include adaptiveValue("width", 225, 92,3,1439,480);
-    @include adaptiveValue("height", 300, 225,2,1920,1440);
-    @include adaptiveValue("height", 225, 92,3,1439,480);
+    @include adaptiveValue("width", 300, 180,2,1920,1440);
+    @include adaptiveValue("width", 180, 92,3,1439,480);
+    @include adaptiveValue("height", 300, 180,2,1920,1440);
+    @include adaptiveValue("height", 180, 92,3,1439,480);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -683,8 +795,8 @@
   &__summary {
     cursor: pointer;
     border-radius: toRem(20);
-    @include adaptiveValue("padding-top", 26, 20,0,1920,1440);
-    @include adaptiveValue("padding-bottom", 26, 20,0,1920,1440);
+    @include adaptiveValue("padding-top", 26, 15,0,1920,1440);
+    @include adaptiveValue("padding-bottom", 26, 15,0,1920,1440);
     @include adaptiveValue("padding-left", 40, 20,0,1920,1440);
     @include adaptiveValue("padding-right", 40, 20,0,1920,1440);
     display: flex;
@@ -707,8 +819,8 @@
   &__button {
     display: block;
     flex: 0 0 auto;
-    @include adaptiveValue("width", 70, 30);
-    @include adaptiveValue("height", 70, 30);
+    @include adaptiveValue("width", 70, 30,0,1920,1440);
+    @include adaptiveValue("height", 70, 30,0,1920,1440);
     border-radius: 50%;
     background-color: white;
     position: relative;
@@ -733,14 +845,14 @@
   }
   // .spollers__body
   &__body {
-    @include adaptiveValue("padding", 40, 20,0,1920,1440);
+    @include adaptiveValue("padding", 40, 15,0,1920,1440);
   }
   // .spollers__content
   &__content {
   }
   // .spollers__sub-title
   &__sub-title {
-    @include adaptiveValue("margin-bottom", 20, 10,0,1920,1440);
+    @include adaptiveValue("margin-bottom", 20, 7,0,1920,1440);
   }
   // .spollers__txt
   &__txt {

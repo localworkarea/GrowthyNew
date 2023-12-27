@@ -84,13 +84,10 @@ function initSliders() {
 				},
 				550: {
 					slidesPerView: 2,
-				},
-				1268: {
-					slidesPerView: 3,
-					spaceBetween: 10,
-				},
-				1440: {
 					spaceBetween: 20,
+				},
+				1500: {
+					slidesPerView: 3,
 				},
 			},
 			// Події

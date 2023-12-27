@@ -5,7 +5,7 @@
 // --- MAIN SECTION ------------------------------------
 .main {
   // .main__container
-  &__container {
+  &__container-sm {
     @include adaptiveValue("padding-top", 155, 140);
     position: relative;
   }
@@ -207,13 +207,16 @@
   // .services-main__list
   &__list {
     display: grid;
-    @include adaptiveValue("gap", 20, 8,2,1920,1300);
-    @include adaptiveValue("gap", 8, 20,3,1300,1299);
-    @media (min-width:em(1300.98)){
+    @include adaptiveValue("gap", 20, 10,0,1920,1440);
+    // @include adaptiveValue("gap", 10, 20,3,1300,1299);
+    @media (min-width:em(1650.98)){
       grid-template-columns: repeat(5, 1fr);
     }
-    @media (max-width: em(1300.98)){
-        grid-template-columns: repeat(3,1fr);
+    @media (max-width: em(1650.98)) and (min-width: em(1100.98)) {
+        grid-template-columns: repeat(4,1fr);
+    }
+    @media (max-width: em(1100.98)){
+        grid-template-columns: repeat(3, 1fr);
     }
     @media (max-width:$mobile){
        grid-template-columns: repeat(2, 1fr); 
@@ -222,7 +225,7 @@
   }
   // .services-main__item
   &__item {
-    @include adaptiveValue("padding", 30, 15,0,1920,768);
+    @include adaptiveValue("padding", 30, 15,0,1920,1440);
     border-radius: toRem(20);
     background: #FFF;
     box-shadow: 0px 5px 30px 0px #D4E5F0;
@@ -231,6 +234,10 @@
     @include adaptiveValue("row-gap", 15, 10,0,1920,1440);
     // .services-main__item_other
     &_other {
+      @media (max-width: em(1650.98)) and (min-width: em(1100.98)){
+          grid-column-start: 2;
+          grid-column-end: 4;
+      }
       @media (min-width:$mobile){
         align-items: center;
         justify-content: center;
@@ -374,8 +381,8 @@
   }
   // .home-projects__link
   &__link {
-    @include adaptiveValue("height", 94, 60);
-    max-width: toRem(586);
+    @include adaptiveValue("height", 94, 60,0,1920,1440);
+    @include adaptiveValue("max-width", 586, 440);
     margin: 0 auto;
 
     @include adaptiveValue("font-size", 22, 18);
@@ -384,105 +391,12 @@
   }
 }
 
-.projects-home {
-  display: grid;
-  @include adaptiveValue("gap", 20, 15,0,1920,1440);
-  @include adaptiveValue("margin-bottom", 50, 20);
-  @media (min-width:$tablet){
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media (max-width:$tablet){
-    grid-template-columns: repeat(2, 1fr);    
-  }
-  @media (max-width: em(650.98)){
-      grid-template-columns: 1fr;
-  }
-  // .projects-home__item
-  &__item {
-    border-radius: toRem(20);
-    background: #FFF;
-    overflow: hidden;
-    box-shadow: 0px 5px 30px 0px #D4E5F0;
-  }
-  // .projects-home__link-ibg
-  &__link-ibg {
-    display: block;
-    border-radius: toRem(20);
-    overflow: hidden;
-    @include adaptiveValue("margin-bottom", 40, 15,0,1920,480);
-    video {
-      position: absolute;
-      inset: 0;
-      object-fit: cover;
-    }
-    @media (min-width:em(650.98)){
-      padding-bottom: 61%;
-    }
-    @media (max-width:em(650.98)){
-      padding-bottom: 44%;
-    }
-  }
-  // .projects-home__body
-  &__body {
-    @include adaptiveValue("padding-left", 40, 15,0,1920,480);
-    @include adaptiveValue("padding-right", 40, 15,0,1920,480);
-    @include adaptiveValue("padding-bottom", 40, 15,0,1920,480);
-    display: flex;
-    flex-direction: column;
-  }
-  // .projects-home__title
-  &__title {
-    @include adaptiveValue("margin-bottom", 63, 47,2,1920,1440);
-    @include adaptiveValue("margin-bottom", 47, 10,3,1439,480);
-  }
-  // .projects-home__list
-  &__list {
-    @include adaptiveValue("margin-bottom", 15, 10,0,1920,480);
-    @include adaptiveValue("gap", 40, 20,2,1920,992);
-    @media (min-width:$tablet){
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width:$tablet){
-      display: flex;
-      flex-wrap: wrap;
-      column-gap: toRem(30);
-      row-gap: toRem(10);
-    }
-  }
-  // .projects-home__li
-  &__li {
-    @media (max-width:$tablet){
-      max-width: toRem(210);
-    }
-  }
-  // .projects-home__name
-  &__name {
-    @include adaptiveValue("margin-bottom", 10, 2);
-  }
-  // .projects-home__sub-name
-  &__sub-name {
-    color: $blue;
-    // word-break: break-all;
-  }
-  // .projects-home__btn
-  &__btn {
-    display: inline-block;
-    align-self: flex-end;
-  }
-}
+
 
 // --- HOME-WHY SECTION ------------------------------------
 .home-why {
   // .home-why__container
   &__container {
-    @media (min-width:$mobile){
-      column-gap: toRem(30);
-    }
-    @media (max-width:$mobile){
-       position: relative;
-       z-index: 1;
-    }
   }
   // .home-why__main
   &__main {
@@ -502,8 +416,8 @@
   }
   // .home-why__sub-title
   &__sub-title {
-    @include adaptiveValue("margin-bottom", 80, 60,2,1920,1440);
-    @include adaptiveValue("margin-bottom", 60, 30,3,1439,360);
+    @include adaptiveValue("margin-bottom", 60, 40,2,1920,1440);
+    @include adaptiveValue("margin-bottom", 40, 20,3,1439,360);
   }
   // .home-why__why
   &__why {
@@ -512,7 +426,7 @@
 
 .why-home {
   display: grid;
-  @include adaptiveValue("gap", 30, 20,0,1920,1440);
+  @include adaptiveValue("gap", 30, 10,0,1920,1440);
   @media (min-width:em(1300.98)){
     grid-template-columns: repeat(3, 1fr);
   }
@@ -525,8 +439,8 @@
     background-color: #FFF;
     display: flex;
     flex-direction: column;
-    @include adaptiveValue("row-gap", 60, 30);
-    @include adaptiveValue("padding", 30, 20,0,1920,769);
+    @include adaptiveValue("row-gap", 40, 20,0,1920,1440);
+    @include adaptiveValue("padding", 30, 20,0,1920,1440);
   }
   // .why-home__title
   &__title {
@@ -555,8 +469,8 @@
 .tabs-servs {
   // .tabs-servs__nav
   &__nav {
+    @include adaptiveValue("margin-bottom", 50, 20,2,1920,1023);
     @media (min-width:em(1023.98)){
-      margin-bottom: 50px;  
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       width: fit-content;
@@ -571,7 +485,7 @@
   }
   // .tabs-servs__title
   &__title {
-    @include adaptiveValue("font-size", 22, 18,0,1920,1440);
+    @include adaptiveValue("font-size", 22, 16,0,1920,1440);
     font-weight: 700;
     line-height: 1.2;
     
@@ -656,8 +570,11 @@
   &__lists {
     display: grid;
     @include adaptiveValue("gap", 20, 10,0,1920,768);
-    @media (min-width:$mobile){
+    @media (min-width:em(1440.98)){
       grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    }
+    @media (max-width: em(1440.98)) and (min-width: $mobile){
+      grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
     }
     @media (max-width:$mobile){
       grid-template-columns: 1fr;    
@@ -669,8 +586,8 @@
   }
   // .tabs-servs__item
   &__item {
-    @include adaptiveValue("min-height", 232, 178,2,1920,1440);
-    @include adaptiveValue("min-height", 178, 150,3,1439,1024);
+    @include adaptiveValue("min-height", 232, 110,0,1920,1440);
+    // @include adaptiveValue("min-height", 178, 150,3,1439,1024);
     @media (any-hover: hover){
       &:hover{
         box-shadow: 0px 5px 30px 0px #8aabc1;
@@ -685,12 +602,17 @@
   }
   // .tabs-servs__link
   &__link {
+    font-weight: 700;
+    line-height: 1.2;
+    @include adaptiveValue("font-size", 30, 20,2,1920,1440);
+    @include adaptiveValue("font-size", 20, 18,3,1439,480);
     @include adaptiveValue("padding", 30, 15,0,1920,1440);
     display: flex;
     @media (min-width:$mobile){
       height: 100%;
     }
     @media (max-width:$mobile){
+        font-weight: 500;
         gap: toRem(10);
         align-items: center;    
         padding: toRem(10) toRem(15) !important;    
@@ -716,7 +638,7 @@
 // --- HOME-BLOG SECTION ------------------------------------
 .home-blog {
   // .home-blog__container
-  &__container {
+  &__container-sm {
   }
   // .home-blog__title
   &__title {
@@ -745,8 +667,8 @@
   &__item {
     position: relative;
     overflow: hidden;
-    @include adaptiveValue("min-height", 344, 258,2,1920,1440);
-    @include adaptiveValue("min-height", 258, 186,3,1439,480);
+    @include adaptiveValue("min-height", 344, 220,2,1920,1440);
+    @include adaptiveValue("min-height", 220, 186,3,1439,480);
     @media (min-width:$mobileSmall){
       border-radius: toRem(30);
     }
@@ -778,7 +700,7 @@
     z-index: 1;
     height: 100%;
     pointer-events: none;
-    @include adaptiveValue("padding", 30, 20,0,1920,768);
+    @include adaptiveValue("padding", 30, 20,0,1920,1440);
     display: flex;
     flex-direction: column;
     row-gap: toRem(10);
@@ -940,7 +862,7 @@
   // .serv-all__summary
   &__summary {
     @media (min-width:$mobileSmall){
-      margin-bottom: toRem(20);
+      margin-bottom: toRem(10);
     }
     @media (max-width:$mobileSmall){
        display: flex;
@@ -979,6 +901,7 @@
   // .serv-all__item
   &__item {
     padding: toRem(30);
+    @include adaptiveValue("padding", 30, 20,0,1920,1440);
   }
   // .serv-all__body
   &__body {
@@ -1146,8 +1069,8 @@
   // .steps-service__test
   &__test {
     border-radius: toRem(20);
-    @include adaptiveValue("padding", 50, 37,2,1920,1440);
-    @include adaptiveValue("padding", 37, 25,3,1439,360);
+    @include adaptiveValue("padding", 50, 20,0,1920,1440);
+    // @include adaptiveValue("padding", 37, 25,3,1439,360);
   }
   
   // .steps-service__sub-title
@@ -1166,12 +1089,19 @@
     // .steps-service__list_test
 		&_test {
       display: grid;
-      gap: toRem(20);
-      @media (min-width:$tablet){
-        grid-template-columns: repeat(3, 1fr);
+      @media (min-width:em(1440.98)){
+        gap: toRem(20);
       }
-      @media (max-width:$tablet){
+      @media (max-width:em(1440.98)) and (min-width: $mobile){
+         gap: toRem(10); 
+      }
+      @media (min-width:$mobile){
+        grid-template-columns: repeat(3, 1fr);
+
+      }
+      @media (max-width:$mobile){
         grid-template-columns: 1fr;
+        gap: toRem(20);
       }
 		}
   }
@@ -1179,7 +1109,7 @@
   &__li {
     border-radius: toRem(20);
     background-color: white;
-    @include adaptiveValue("padding", 30, 20,0,1920,1440);
+    @include adaptiveValue("padding", 30, 15,0,1920,1440);
     @media (min-width:em(1200.98)){
       flex: 1;
     }
@@ -1194,7 +1124,8 @@
   }
   // .steps-service__sub-li
   &__sub-li {
-    @include adaptiveValue("margin-bottom", 10, 6);
+    @include adaptiveValue("margin-bottom", 10, 6,0,1920,1440);
+    line-height: 1.2;
     position: relative;
     &::before {
       content:'';
@@ -1210,8 +1141,8 @@
   // .steps-service__period
   &__period {
     border-radius: toRem(20);
-    @include adaptiveValue("padding", 50, 37,2,1920,1440);
-    @include adaptiveValue("padding", 37, 25,3,1439,360);
+    @include adaptiveValue("padding", 50, 20,0,1920,1440);
+    // @include adaptiveValue("padding", 37, 25,3,1439,360);
     @media (min-width:em(1200.98)){
       position: relative;
       z-index: 1;
@@ -1237,7 +1168,7 @@
 // --- PROJECTS-SERVICE SECTION ------------------------------------
 .projects-service {
   // .projects-service__container
-  &__container {
+  &__container-sm {
   }
   // .projects-service__title
   &__title {
@@ -1255,7 +1186,7 @@
 // --- SPOLLERS-SERVICE SECTION ------------------------------------
 .spollers-service {
   // .spollers-service__container
-  &__container {
+  &__container-sm {
   }
   // .spollers-service__name
   &__name {
@@ -1274,7 +1205,7 @@
 
 .benefits-service {
   // .benefits-service__container
-  &__container {
+  &__container-sm {
   }
   // .benefits-service__name
   &__name {
@@ -1342,7 +1273,7 @@
 
 .serv-service {
   // .serv-service__container
-  &__container {
+  &__container-sm {
     @media (max-width:$mobile){
        display: block !important; 
     }
@@ -1378,6 +1309,11 @@
 	}
 	// .serv-service__btn
 	&__btn {
+    outline: none;
+    svg {
+      border-radius: 50%;
+      box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.2);
+    }
     @media (min-width:em(550.98)){
       position: absolute;
       top: 50%;

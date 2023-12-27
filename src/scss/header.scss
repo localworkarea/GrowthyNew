@@ -1,6 +1,6 @@
 .header {
-  @include adaptiveValue("padding-top", 23, 10);
-  @include adaptiveValue("padding-bottom", 23, 10);
+  @include adaptiveValue("padding-top", 23, 10,0,1920,1440);
+  @include adaptiveValue("padding-bottom", 23, 10,0,1920,1440);
   position: fixed;
   top: 0;
   left: 0;
@@ -31,8 +31,8 @@
   &__container {
     display: flex;
     align-items: center;
-    @include adaptiveValue("column-gap", 90, 30,2,1920,1440);
-    @include adaptiveValue("column-gap", 30, 20,3,1439,768);
+    @include adaptiveValue("column-gap", 90, 60,2,1920,1440);
+    @include adaptiveValue("column-gap", 60, 20,3,1439,768);
     @media (max-width: em(1340.98)){
         justify-content: space-between;
     }
@@ -243,10 +243,11 @@
   }
   // .menu__btn
   &__btn {
-    height: toRem(59);
     @media (min-width:em(1440.98)){
+      height: toRem(59);
       min-width: toRem(284);
     }
+    
     @media (max-width: em(1340.98)){
       position: relative;
       z-index: 5;

@@ -27,8 +27,8 @@
 	&__img-bg {
     position: absolute;
     z-index: 0;
-    @include adaptiveValue("width", 208, 155,2,1920,1440);
-    @include adaptiveValue("width", 155, 85,3,1440,480);
+    @include adaptiveValue("width", 208, 100,2,1920,1440);
+    @include adaptiveValue("width", 100, 85,3,1440,480);
     height: auto;
     @media (min-width:$mobileSmall){
       top: toRem(50);
