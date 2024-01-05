@@ -38,6 +38,9 @@
       bottom: toRem(30);
       right: toRem(20);        
     }
+    .page-thanks & {
+      display: none;
+    }
 	}
   // .footer__top
   &__top {

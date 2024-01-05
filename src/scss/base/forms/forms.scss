@@ -14,10 +14,10 @@ textarea {
 	height: toRem(70);
 	display: block;
 	background: #fff;
+	color: $mainColor;
 	
-	color: $gray-87;
 	font-size: toRem(16);
-	font-weight: 400;
+	font-weight: 700;
 	line-height: 1.35;
 	
 	outline: none;
@@ -35,6 +35,8 @@ textarea {
 .input[placeholder]:not([data-placeholder-nohiden]) {
 	&::placeholder {
 		transition: opacity 0.3s;
+		color: $gray-87;
+		font-weight: 400;
 	}
 	&:focus::placeholder {
 		opacity: 0;
@@ -43,7 +45,7 @@ textarea {
 
 textarea.input {
 	resize: none;
-	padding: 0px 0px;
+	min-height: toRem(140);
 }
 
 .form {
@@ -57,6 +59,10 @@ textarea.input {
 }
 
 .form__error {
+	position: absolute;
+	bottom: toRem(3);
+	right: 5%;
+
 	color: red;
   @include adaptiveValue("font-size", 16, 10);
   font-weight: 400;
@@ -80,9 +86,7 @@ textarea.input {
   &__item {
 		position: relative;
 		.form__error {
-			position: absolute;
-			bottom: toRem(3);
-	    right: 5%;
+
 		}
   }
   // .form-first__label

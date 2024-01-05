@@ -224,6 +224,12 @@ export function formSubmit() {
 		formValidate.formClean(form);
 		// Повідомляємо до консолі
 		formLogging(`Форму відправлено!`);
+		// Открываем страницу благодарности
+    openThankYouPage();
+	}
+	function openThankYouPage() {
+		// Заменить 'thankyou.html' на путь к странице благодарности
+		window.location.href = 'thanks.html';
 	}
 	function formLogging(message) {
 		FLS(`[Форми]: ${message}`);

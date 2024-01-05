@@ -1,10 +1,29 @@
-<div id="popup" aria-hidden="true" class="popup">
+<div id="popup-form" aria-hidden="true" class="popup popup-start">
 	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
-			</div>
+		<div class="popup__content bg-blue">
+			<button data-close type="button" class="popup__close">
+				<img src="@img/icons/close.svg" alt="close icon">
+			</button>
+			<h2 class="popup__title">
+				Почати роботу з нами
+			</h2>
+			<form data-ajax class="popup__form" action="" method="POST">
+				<div class="popup__item">
+					<input type="text" name="name" placeholder="Введіть ваше ім’я"  data-error="Заповніть поле" data-required class="popup__input input">
+				</div>
+				<div class="popup__items">
+					<div class="popup__item">
+						<input type="email" name="email" placeholder="E-mail"  data-error="Заповніть поле" data-required class="popup__input input">
+					</div>
+					<div class="popup__item">
+						<input type="tel" name="tel" data-inputmask="'mask': '+38 (099) 999 99 99'" placeholder="+38 (0__) ___ __ __" data-error="Заповніть поле" data-required class="popup__input input">
+					</div>
+				</div>
+				<div class="popup__item">
+					<textarea name="comment" placeholder="Важливе питання, яке ти хотів би задати одразу" class="input"></textarea>
+				</div>
+				<button type="submit" class="popup__button form__button btn btn_01">Відправити</button>
+			</form>
 		</div>
 	</div>
 </div>

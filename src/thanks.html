@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+	@@include('html/_head.htm',{
+	"title":"Thank you!"
+	})
+	<body>
+		<div class="wrapper page-thanks">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="thanks bg-blue pdd-sect">
+					<div class="thanks__container-sm">
+						<div class="thanks__body">
+							<div class="thanks__bg-ibg-contain">
+								<img class="thanks__bg" src="@img/elem/el-1.png" alt="background image">
+							</div>
+							<div class="thanks__wrapper">
+								<h1 class="thanks__title">
+									Дякуємо за заявку!
+								</h1>
+								<p class="thanks__txt">
+									Ми звʼяжемось з Вами найближчим часом
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

@@ -823,6 +823,63 @@
 .home-form {
 }
 
+// --- HOME-SEO SECTION -------------------------------------
+.home-seo {
+  // .home-seo__container-sm
+  &__container-sm {
+  }
+  // .home-seo__body
+  &__body {
+  }
+  // .home-seo__content
+  &__content {
+  }
+	// .home-seo__item
+	&__item {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 60, 30,0,1920,480);
+    }
+	}
+	// .home-seo__title
+	&__title {
+    line-height: 1.15;
+	}
+	// .home-seo__texts
+	&__texts {
+    @include adaptiveValue("font-size", 26, 16,0,1920,480);
+    line-height: 1.15;
+    p, li {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 30, 20,0,1920,1440);
+      }
+    }
+    h2, h3, h4, h5, h6 {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 20, 10,0,1920,1440);
+      }
+    }
+    h2, h3, h4, h5, h6 {
+      font-weight: 700;
+    }
+    ol li {
+      list-style: auto;
+      @include adaptiveValue("margin-left", 30, 20,0,1920,400);
+    }
+	}
+  // .home-seo__more
+  &__more {
+    @include adaptiveValue("margin-top", 80, 40,0,1920,480);
+    @include adaptiveValue("height", 94, 60,0,1920,1440);
+    @include adaptiveValue("font-size", 22, 16,0,1920,480);
+    @media (min-width:$mobile){
+      margin-left: 40.4%;
+    }
+    @include adaptiveValue("max-width", 586, 300,2,1920,768.98);
+  }
+}
+
+
+
 // -------------------------------------------
 // === SERVICES PAGE =================================================
 // -------------------------------
@@ -1360,3 +1417,77 @@
   }
 }
 
+
+
+
+// -------------------------------------------
+// === THANKS PAGE =================================================
+// -------------------------------
+.page-thanks {
+  .page {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.thanks {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  // .thanks__container-sm
+  &__container-sm {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  // .thanks__body
+  &__body {
+    text-align: center;
+    position: relative;
+    color: #fff;
+    line-height: 1.15;
+    z-index: 2;
+    max-width: toRem(955);
+    @include adaptiveValue("max-width", 955, 730,0,1920,1440);
+    width: 100%;
+  }
+	// .thanks__bg-ibg-contain
+	&__bg-ibg-contain {
+    @media (min-width:em(1440.98)){
+      padding-bottom: 70%;
+    }
+    @media (max-width:em(1440.98)){
+        padding-bottom: 50%;
+    }
+    @media (max-width: em(550.98)){
+        padding-bottom: 70%;
+    }
+	}
+  // .thanks__bg
+  &__bg {
+  }
+	// .thanks__wrapper
+	&__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+	}
+  // .thanks__title
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 100, 75,2,1920,1440);
+    @include adaptiveValue("font-size", 75, 40,3,1439.98,480);
+    margin-bottom: toRem(30);
+  }
+  // .thanks__txt
+  &__txt {
+    @include adaptiveValue("font-size", 60, 40,2,1920,1440);
+    @include adaptiveValue("font-size", 40, 28,3,1439.98,480);
+    @include adaptiveValue("max-width", 700, 500,0,1920,1440);
+    margin: 0 auto;
+  }
+}
