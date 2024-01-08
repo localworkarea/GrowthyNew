@@ -1623,7 +1623,7 @@ body::after {
 }
 
 .no-webp .hero-service__container{
-  background-image: url(../img/elem/el-1-1.png); }
+  background-image: url(../img/elem/el-1.png); }
 
 .hero-service__container {
   display: -webkit-box;
@@ -2074,6 +2074,7 @@ body::after {
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
+    list-style: none;
     line-height: normal;
     opacity: 0.2;
     position: relative;
@@ -7337,4 +7338,4 @@ body::after {
   }
 }
 
-.webp .hero-service__container{ background-image: url(../img/elem/el-1-1.webp); }
+.webp .hero-service__container{ background-image: url(../img/elem/el-1.webp); }
