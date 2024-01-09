@@ -499,6 +499,9 @@
     @media (any-hover: hover){
       &:hover{
         background-color: $gray;
+        &._tab-active {
+          background-color: $orange;
+        }
       }
     }
 

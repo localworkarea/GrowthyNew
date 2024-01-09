@@ -850,10 +850,24 @@
   }
   // .spollers__content
   &__content {
+    h2, h3, h4, h5, h6 {
+      @include adaptiveValue("font-size", 36,22,2,1920,1440);
+      @include adaptiveValue("font-size", 22, 18,3,1439,360);
+      font-weight: 700;
+      line-height: 1.2;
+      @include adaptiveValue("margin-bottom", 20, 7,0,1920,1440);
+    }
+    p {
+      @include adaptiveValue("font-size", 22, 16,0,1920,1440);
+      font-weight: 400;
+      line-height: 1.2;
+      &:not(:last-child) {
+        margin-bottom: toRem(15);
+      }
+    }
   }
   // .spollers__sub-title
   &__sub-title {
-    @include adaptiveValue("margin-bottom", 20, 7,0,1920,1440);
   }
   // .spollers__txt
   &__txt {

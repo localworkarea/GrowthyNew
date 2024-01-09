@@ -936,6 +936,24 @@ body::after {
           transform: translate(-50%, -50%) rotate(90deg);
 }
 
+.spollers__content h2,
+.spollers__content h3,
+.spollers__content h4,
+.spollers__content h5,
+.spollers__content h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.spollers__content p {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.spollers__content p:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+
 .swiper-initialized {
   -ms-touch-action: pan-y;
       touch-action: pan-y;
@@ -2896,8 +2914,24 @@ body::after {
     padding: 2.5rem;
   }
 
-  .spollers__sub-title {
+  .spollers__content h2,
+  .spollers__content h3,
+  .spollers__content h4,
+  .spollers__content h5,
+  .spollers__content h6 {
+    font-size: 2.25rem;
+  }
+
+  .spollers__content h2,
+  .spollers__content h3,
+  .spollers__content h4,
+  .spollers__content h5,
+  .spollers__content h6 {
     margin-bottom: 1.25rem;
+  }
+
+  .spollers__content p {
+    font-size: 1.375rem;
   }
 
   .header {
@@ -3337,8 +3371,16 @@ body::after {
     padding: 0.9375rem;
   }
 
-  .spollers__sub-title {
+  .spollers__content h2,
+  .spollers__content h3,
+  .spollers__content h4,
+  .spollers__content h5,
+  .spollers__content h6 {
     margin-bottom: 0.4375rem;
+  }
+
+  .spollers__content p {
+    font-size: 1rem;
   }
 
   .header {
@@ -4698,6 +4740,14 @@ body::after {
     margin-bottom: 2.5rem;
   }
 
+  .spollers__content h2,
+  .spollers__content h3,
+  .spollers__content h4,
+  .spollers__content h5,
+  .spollers__content h6 {
+    font-size: 1.125rem;
+  }
+
   .header__logo img {
     width: 5.375rem;
   }
@@ -5618,15 +5668,55 @@ body::after {
     }
 }
 
+@supports (font-size: clamp( 1.375rem , -1.25rem  +  2.9166666667vw , 2.25rem )) {
+    .spollers__content h2,
+    .spollers__content h3,
+    .spollers__content h4,
+    .spollers__content h5,
+    .spollers__content h6 {
+      font-size: clamp( 1.375rem , -1.25rem  +  2.9166666667vw , 2.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.375rem , -1.25rem  +  2.9166666667vw , 2.25rem )) {
+    .spollers__content h2,
+    .spollers__content h3,
+    .spollers__content h4,
+    .spollers__content h5,
+    .spollers__content h6 {
+      font-size: calc(1.375rem + 0.875 * (100vw - 90rem) / 30);
+    }
+}
+
 @supports (margin-bottom: clamp( 0.4375rem , -2rem  +  2.7083333333vw , 1.25rem )) {
-    .spollers__sub-title {
+    .spollers__content h2,
+    .spollers__content h3,
+    .spollers__content h4,
+    .spollers__content h5,
+    .spollers__content h6 {
       margin-bottom: clamp( 0.4375rem , -2rem  +  2.7083333333vw , 1.25rem );
     }
 }
 
 @supports not (margin-bottom: clamp( 0.4375rem , -2rem  +  2.7083333333vw , 1.25rem )) {
-    .spollers__sub-title {
+    .spollers__content h2,
+    .spollers__content h3,
+    .spollers__content h4,
+    .spollers__content h5,
+    .spollers__content h6 {
       margin-bottom: calc(0.4375rem + 0.8125 * (100vw - 90rem) / 30);
+    }
+}
+
+@supports (font-size: clamp( 1rem , -0.125rem  +  1.25vw , 1.375rem )) {
+    .spollers__content p {
+      font-size: clamp( 1rem , -0.125rem  +  1.25vw , 1.375rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , -0.125rem  +  1.25vw , 1.375rem )) {
+    .spollers__content p {
+      font-size: calc(1rem + 0.375 * (100vw - 90rem) / 30);
     }
 }
 
@@ -6630,6 +6720,26 @@ body::after {
     }
 }
 
+@supports (font-size: clamp( 1.125rem , 1.0415894347rem  +  0.3707136237vw , 1.375rem )) {
+    .spollers__content h2,
+    .spollers__content h3,
+    .spollers__content h4,
+    .spollers__content h5,
+    .spollers__content h6 {
+      font-size: clamp( 1.125rem , 1.0415894347rem  +  0.3707136237vw , 1.375rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.125rem , 1.0415894347rem  +  0.3707136237vw , 1.375rem )) {
+    .spollers__content h2,
+    .spollers__content h3,
+    .spollers__content h4,
+    .spollers__content h5,
+    .spollers__content h6 {
+      font-size: calc(1.125rem + 0.25 * (100vw - 22.5rem) / 67.4375);
+    }
+}
+
 @supports (width: clamp( 5.375rem , 5.1456209453rem  +  1.0194624652vw , 6.0625rem )) {
     .header__logo img {
       width: clamp( 5.375rem , 5.1456209453rem  +  1.0194624652vw , 6.0625rem );
@@ -7326,6 +7436,10 @@ body::after {
 
   .tabs-servs__title:hover {
     background-color: #F6F6F6;
+  }
+
+  .tabs-servs__title:hover._tab-active {
+    background-color: #FFA132;
   }
 
   .tabs-servs__item:hover {
