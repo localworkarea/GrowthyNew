@@ -1,5 +1,15 @@
+[class*="__container-s"] {
+  max-width: toRem(1160);
+  padding-left:toRem(20);
+  padding-right:toRem(20);
+}
 [class*="__container-sm"] {
   @include adaptiveValue("max-width", 1840, 1160,0,1920,1440);
+  padding-left:toRem(20);
+  padding-right:toRem(20);
+}
+[class*="__container-sx"] {
+  max-width: toRem(1070);
   padding-left:toRem(20);
   padding-right:toRem(20);
 }
@@ -12,7 +22,7 @@
 }
 // -- отступ от хедера на всех страницах.
 .page {
-@include adaptiveValue("padding-top", 105, 80,0,1920,1440);
+  @include adaptiveValue("padding-top", 105, 80,0,1920,1440);
 }
 
 // -- page navigation ================================
@@ -200,24 +210,27 @@
 .bg-blue {
   background-color: $blue;
 }
+.bg-blue-f6 {
+  background-color: $blue-f6;
+}
 .bg-gray {
   background-color: $gray;
 }
 
 // == paddings sections ----------------------
 .pdd-sect {
-  @include adaptiveValue("padding-top", 100, 60,2,1920,1440);
-  @include adaptiveValue("padding-top", 60, 40,3,1439,768);
+  @include adaptiveValue("padding-top", 100, 50,2,1920,1440);
+  @include adaptiveValue("padding-top", 50, 40,3,1439,768);
   @include adaptiveValue("padding-bottom", 100, 60,2,1920,1440);
   @include adaptiveValue("padding-bottom", 60, 40,3,1439,768);
 }
 .pdd-t {
-  @include adaptiveValue("padding-top", 100, 60,2,1920,1440);
-  @include adaptiveValue("padding-top", 60, 40,3,1439,768);
+  @include adaptiveValue("padding-top", 100, 50,2,1920,1440);
+  @include adaptiveValue("padding-top", 50, 40,3,1439,768);
 }
 .pdd-b {
-  @include adaptiveValue("padding-bottom", 100, 60,2,1920,1440);
-  @include adaptiveValue("padding-bottom", 60, 40,3,1439,768);
+  @include adaptiveValue("padding-bottom", 100, 50,2,1920,1440);
+  @include adaptiveValue("padding-bottom", 50, 40,3,1439,768);
 }
 
 
@@ -365,10 +378,14 @@
 
 // == block of titles =====================
 .block-title {
-  @include adaptiveValue("margin-bottom", 50, 30,0,1920,768);
+  @include adaptiveValue("margin-bottom", 50, 30,0,1920,1440);
   text-align: center;
   // .block-title__title
   &__title {
+    // .block-title__title_lft
+    &_lft {
+      text-align:left;
+    }
   }
 	// .block-title__txt
 	&__txt {
@@ -416,7 +433,9 @@
 .projects-home {
   display: grid;
   @include adaptiveValue("gap", 20, 15,0,1920,1440);
-  @include adaptiveValue("margin-bottom", 50, 20);
+  &:not(:last-child) {
+    @include adaptiveValue("margin-bottom", 50, 20);
+  }
   @media (min-width:$tablet){
     grid-template-columns: repeat(3, 1fr);
   }
@@ -439,7 +458,8 @@
     border-radius: toRem(20);
     overflow: hidden;
     @include adaptiveValue("margin-bottom", 20, 15,0,1920,1440);
-    video {
+    video,
+    img {
       position: absolute;
       inset: 0;
       object-fit: cover;
@@ -913,4 +933,81 @@
 }
 .swiper-button-lock {
 	display: none !important;
+}
+
+// == PAGINATION =============================
+.pagination {
+  margin: 0 auto;
+  max-width: toRem(586);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: toRem(20);
+  // .pagination__items
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  // .pagination__item
+  &__item {
+  }
+  // .pagination__button
+  &__button {
+    transition: opacity .3s;
+    img {
+      @media (max-width:$mobileSmall){
+         width: toRem(30); 
+         height: toRem(30); 
+      }
+    }
+    &.prev {
+      transform: scaleX(-1);
+    }
+    &.next {
+    }
+    @media (any-hover: hover){
+      &:hover{
+        opacity: .1;
+      }
+    }
+   &[disabled] {
+      opacity: .1;
+    }
+  }
+  // .pagination__link
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: toRem(50);
+    height: toRem(50);
+    border-radius: toRem(14);
+    font-weight: 500;
+    @include adaptiveValue("font-size", 22, 12,0,1920,480);
+    transition: background-color .3s, opacity .3s;
+    @media (max-width:$mobile){
+      width: toRem(40);
+      height: toRem(40);
+    }
+    @media (max-width:$mobileSmall){
+      width: toRem(30);
+      height: toRem(30);
+      border-radius: toRem(8);
+    }
+    &.active {
+      background-color: $blue;
+      color: #fff;
+    }
+    @media (any-hover: hover){
+      &:hover{
+        &:not(.active) {
+          background-color: #F1F1F1;
+        }
+      }
+    }
+  }
+  // .pagination__blank
+  &__blank {
+  }
 }
