@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+	@@include('html/_head.htm',{
+	"title":"Форма"
+	})
+	<body>
+		<div class="wrapper page-form">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<nav class="page-nav">
+					<div class="page-nav__container">
+						<ol itemscope itemtype="https://schema.org/BreadcrumbList" class="page-nav__list">
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="page-nav__item">
+								<a itemprop="item"  href="index.html">
+									<span itemprop="name">Головна</span>
+								</a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="page-nav__item">
+								<a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="https://example.com/books/sciencefiction" href="services.html">
+									<span itemprop="name">Всі послуги</span>
+								</a>
+								<meta itemprop="position" content="2" />
+							</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="page-nav__item">
+								<span itemprop="name">Таргетована реклама Facebook</span>
+								<meta itemprop="position" content="3" />
+							</li>
+						</ol>
+					</div>
+				</nav>
+				<section class="form-page bg-blue pdd-sect">
+					<img class="form-page__bg ibg" src="@img/elem/el-1-blur.png" alt="бекграунд">
+					<div class="form-page__container-sx">
+						<div class="form-page__body">
+							<div class="form-page__title block-title">
+								<h2 class="block-title__title title-big">Почати роботу з нами</h2>
+								<p class="block-title__txt">
+									Задамо правильні питання, опишемо можливості та розробимо план дій
+								</p>
+							</div>
+							<form data-ajax class="form-page__form" action="" method="POST">
+								<div class="form-page__item">
+									<input type="text" name="name" placeholder="Введіть ваше ім’я"  data-error="Заповніть поле" data-required class="form-page__input input">
+								</div>
+								<div class="form-page__item">
+									<input type="tel" name="tel" data-inputmask="'mask': '+38 (099) 999 99 99'" placeholder="+38 (0__) ___ __ __" data-error="Заповніть поле" data-required class="form-page__input input">
+								</div>
+								<button type="submit" class="form-page__button form__button btn btn_01">Відправити</button>
+							</form>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

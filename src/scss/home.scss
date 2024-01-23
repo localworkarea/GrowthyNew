@@ -1551,22 +1551,21 @@
       border-color: $blue;
       font-weight: 600;
       color: $blue;
-      .cases__link-ic {
-        display: block;
-        width: toRem(14);
-        @media (max-width:em(1440.98)){
-            width: toRem(10);
-        }
-        @media (max-width:$mobileSmall){
-           width: toRem(8); 
-        }
-      }
     }
   }
-	// .cases__link-ic
-	&__link-ic {
-    display: none;
-	}
+  // .cases__link-ic
+  &__link-ic {
+      display: flex;
+      align-items: center;
+      width: toRem(14);
+      @media (max-width:em(1440.98)){
+          width: toRem(10);
+      }
+		}
+		// .cases__ic-close
+		&__ic-close {
+      width: 100%;
+		}
   // .cases__projects
   &__projects {
   }
@@ -1580,10 +1579,6 @@
 // ===============================
 .case-hero {
   position: relative;
-  // min-height: toRem(540);
-  // @media (max-width:$mobileSmall){
-  //    min-height: 100vh; 
-  // }
   // .case-hero__bg
   &__bg {
     position: absolute;
@@ -1633,14 +1628,10 @@
 
 .case-block {
   h2, h3, h4, h5, h6 {
-    // @include adaptiveValue("font-size", 68, 36,2,1920,1440);
-    // @include adaptiveValue("font-size", 36, 30,3,1439,360);
-    // font-weight: 700;
   }
   h2, h3, h4, h5, h6, p {
   }
   p {
-
   }
   // .case-block__container-sx
   &__container-sx {
@@ -2042,3 +2033,235 @@
   &__num {
   }
 }
+
+
+
+
+// --------------------------------
+// == CONTACTS PAGE ==========================================
+// --------------------------------
+.contacts {
+  // .contacts__container-sm
+  &__container-sm {
+  }
+  // .contacts__title
+  &__title {
+  }
+  // .contacts__wrapper
+  &__wrapper {
+    position: relative;
+    @include adaptiveValue("min-height", 620, 450,0,1920,1440);
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 50, 30,0,1920,1440);
+    }
+    .contacts__container-sm {
+      position: relative;
+      z-index: 3;
+    }
+  }
+  // .contacts__bg
+  &__bg {
+    position: absolute;
+  }
+  // .contacts__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include adaptiveValue("padding-top", 90, 50,0,1920,1440);
+    @media (min-width:$tablet){
+       gap: toRem(20);
+    }
+    @media (max-width:$tablet){
+       gap: toRem(10); 
+    }
+    @media (max-width: em(900.98)){
+        grid-template-columns: 1fr;
+        max-width: toRem(500);
+        margin: 0 auto;
+    }
+  }
+  // .contacts__item
+  &__item {
+  }
+  // .contacts__gallery
+  &__gallery {
+    &:not(:last-child) {
+      margin-bottom: toRem(50);
+    }
+  }
+	// .contacts__map
+	&__map {
+    iframe {
+      border-radius: toRem(30);
+      @media (min-width:$mobile){
+        aspect-ratio: 1800/500;
+      }
+      @media (max-width:$mobile){
+        aspect-ratio: 768/384;
+      }
+      @media (max-width:$mobileSmall){
+        aspect-ratio: 768/500;
+      }
+    }
+	}
+}
+
+.item-contcs {
+  // .item-contcs__button
+  &__button {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: toRem(10);
+    padding-left: toRem(10);
+    padding-right: toRem(10);
+    @include adaptiveValue("height", 147, 100,2,1920,1440.98);
+    @include adaptiveValue("height", 100, 60,3,1440.98,480);
+
+    border-radius: toRem(30);
+    border: 2px solid rgba(255, 255, 255, 0.50);
+    background-color: rgba(255, 255, 255, 0.70);
+    backdrop-filter: blur(15px);
+    transition: background-color .3s ease, color .3s ease;
+    @media (any-hover: hover){
+      &:hover{
+        background-color: #000;
+        color: #fff;
+      }
+    }
+
+    @media (max-width:$mobile){
+       border-radius: toRem(20); 
+    }
+  }
+  // .item-contcs__ic
+  &__ic {
+    width: 100%;
+    @include adaptiveValue("max-width", 44, 25,2,1920,1440.98);
+    @include adaptiveValue("max-width", 25, 20,3,1440.98,480);
+  }
+  // .item-contcs__txt
+  &__txt {
+  }
+}
+
+  
+.gallery {
+  display: grid;
+  @media (min-width:$mobile){
+    gap: toRem(20); 
+  }
+  @media (max-width:$mobile){
+    gap: toRem(10); 
+  }
+  @media (min-width:$mobileSmall){
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  }
+  // .gallery__image
+  &__image {
+    border-radius: toRem(20);
+    overflow: hidden;
+    @media (any-hover: hover){
+      &:hover{
+        .gallery__preview {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  // .gallery__preview
+  &__preview {
+    transition: transform .6s ease-in-out;
+    @media (min-width:$mobileSmall){
+      aspect-ratio: 344/344;
+    }
+    @media (max-width:$mobileSmall){
+       aspect-ratio: 344/170; 
+    }
+  }
+}
+
+
+
+// --------------------------------
+// == TEAM PAGE ==========================================
+// --------------------------------
+.team {
+  // .team__container-sm
+  &__container-sm {
+  }
+  // .team__title
+  &__title {
+    .block-title__txt {
+      @include adaptiveValue("font-size", 22, 16,0,1920,1440);
+      text-align: left;
+    }
+  }
+  // .team__body
+  &__body {
+  }
+}
+
+
+// --------------------------------
+// == FORM PAGE ==========================================
+// --------------------------------
+.form-page {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  position: relative;
+  // .form-page__container-sx
+  &__container-sx {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+  // .form-page__bg
+  &__bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    max-width: toRem(667);
+    @media (min-width:$mobileSmall){
+      object-fit: contain;
+    }
+  }
+  // .form-page__body
+  &__body {
+    position: relative;
+    z-index:3;
+    flex: 1;
+  }
+  // .form-page__title
+  &__title {
+    color: #fff;
+    .block-title__txt {
+      font-weight: 700;
+      @include adaptiveValue("font-size", 40, 26,2,1920,1440);
+      @include adaptiveValue("font-size", 26, 20,3,1439,360);
+    }
+  }
+  // .form-page__form
+  &__form {
+    display: grid;
+    gap: toRem(10);
+    @media (min-width:em(650.98)){
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  // .form-page__item
+  &__item {
+    position: relative;
+  }
+  // .form-page__input
+  &__input {
+  }
+  // .form-page__button
+  &__button {
+  }
+}
+

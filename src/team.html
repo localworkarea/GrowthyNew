@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+	@@include('html/_head.htm',{
+	"title":"Наша команда"
+	})
+	<body>
+		<div class="wrapper page-cases">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<nav class="page-nav">
+					<div class="page-nav__container">
+						<ol itemscope itemtype="https://schema.org/BreadcrumbList" class="page-nav__list">
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="page-nav__item">
+								<a itemprop="item"  href="index.html">
+									<span itemprop="name">Головна</span>
+								</a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="page-nav__item">
+								<a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="https://example.com/books/sciencefiction" href="services.html">
+									<span itemprop="name">Всі послуги</span>
+								</a>
+								<meta itemprop="position" content="2" />
+							</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="page-nav__item">
+								<span itemprop="name">Таргетована реклама Facebook</span>
+								<meta itemprop="position" content="3" />
+							</li>
+						</ol>
+					</div>
+				</nav>
+				<section class="team pdd-sect">
+					<div class="team__container-sm">
+						<div class="team__title block-title">
+							<h1 class="block-title__title block-title__title_lft title-big">Наша команда</h1>
+							<p class="block-title__txt">
+								Growthy - це команда, що допомагає брендам і компаніям рости, використовуючи нові стратегії
+							</p>
+						</div>
+						<div class="team__body">
+							<ul class="home-company__list">
+								<li class="home-company__item">
+									<div class="home-company__image-ibg">
+										<img data-src="@img/staff/team-ivan.png" alt="Ivan Salnitsky">
+									</div>
+									<div class="home-company__about">
+										<p class="home-company__name txt-ten">Іван Сальницький</p>
+										<p class="home-company__position txt-ten">CEO</p>
+									</div>
+								</li>
+								<li class="home-company__item">
+									<div class="home-company__image-ibg">
+										<img data-src="@img/staff/team-anna.png" alt="Anna Ozarchuk">
+									</div>
+									<div class="home-company__about">
+										<p class="home-company__name txt-ten">Анна Озарчук</p>
+										<p class="home-company__position txt-ten">ACCOUNT MANAGER</p>
+									</div>
+								</li>
+								<li class="home-company__item">
+									<div class="home-company__image-ibg">
+										<img data-src="@img/staff/team-katia.png" alt="Katia Savchuk">
+									</div>
+									<div class="home-company__about">
+										<p class="home-company__name txt-ten">Катя Савчук</p>
+										<p class="home-company__position txt-ten">HEAD OF DESIGN</p>
+									</div>
+								</li>
+								<li class="home-company__item">
+									<div class="home-company__image-ibg">
+										<img data-src="@img/staff/team-dima.png" alt="Dmytro Kopylov">
+									</div>
+									<div class="home-company__about">
+										<p class="home-company__name txt-ten">Діма Копилов</p>
+										<p class="home-company__position txt-ten">CREATIVE STRATEGIST</p>
+									</div>
+								</li>
+								<li class="home-company__item">
+									<div class="home-company__image-ibg">
+										<img data-src="@img/staff/team-vlad.png" alt="Vlad Bondarenko">
+									</div>
+									<div class="home-company__about">
+										<p class="home-company__name txt-ten">Влад Бондаренко</p>
+										<p class="home-company__position txt-ten">WEB DEVELOPER</p>
+									</div>
+								</li>
+								<li class="home-company__item">
+									<div class="home-company__image-ibg">
+										<img data-src="@img/staff/team-max.png" alt="Max Tkachenko">
+									</div>
+									<div class="home-company__about">
+										<p class="home-company__name txt-ten">Максим Ткаченко</p>
+										<p class="home-company__position txt-ten">PPC SPECIALIST</p>
+									</div>
+								</li>
+								<li class="home-company__item">
+									<div class="home-company__image-ibg">
+										<img data-src="@img/staff/team-sofia.png" alt="Sofia Korneeva">
+									</div>
+									<div class="home-company__about">
+										<p class="home-company__name txt-ten">Софія Корнєєва</p>
+										<p class="home-company__position txt-ten">SMM MANAGER</p>
+									</div>
+								</li>
+								<li class="home-company__item">
+									<div class="home-company__image-ibg">
+										<img data-src="@img/staff/team-vitaliy.png" alt="Vitaliy Voloshyn">
+									</div>
+									<div class="home-company__about">
+										<p class="home-company__name txt-ten">Віталій Волошин</p>
+										<p class="home-company__position txt-ten">WEB DEVELOPER</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				@@include('html/_form-two.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

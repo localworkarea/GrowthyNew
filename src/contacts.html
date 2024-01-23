@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+	@@include('html/_head.htm',{
+	"title":"Контакти"
+	})
+	<body>
+		<div class="wrapper page-contacts">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<nav class="page-nav">
+					<div class="page-nav__container">
+						<ol itemscope itemtype="https://schema.org/BreadcrumbList" class="page-nav__list">
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="page-nav__item">
+								<a itemprop="item"  href="index.html">
+									<span itemprop="name">Головна</span>
+								</a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="page-nav__item">
+								<a itemscope itemtype="https://schema.org/WebPage" itemprop="item" itemid="https://example.com/books/sciencefiction" href="services.html">
+									<span itemprop="name">Всі послуги</span>
+								</a>
+								<meta itemprop="position" content="2" />
+							</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="page-nav__item">
+								<span itemprop="name">Таргетована реклама Facebook</span>
+								<meta itemprop="position" content="3" />
+							</li>
+						</ol>
+					</div>
+				</nav>
+				<section class="contacts pdd-sect">
+					<div class="contacts__container-sm">
+						<div class="contacts__title block-title">
+							<h1 class="block-title__title block-title__title_lft title-big">Контакти</h1>
+						</div>
+					</div>
+					<div class="contacts__wrapper">
+						<img class="contacts__bg ibg" src="@img/contacts/hero.jpg" alt="бекграунд">
+						<div class="contacts__container-sm">
+							<ul class="contacts__items">
+								<li class="contacts__item item-contcs">
+									<a href="tel:+380660725474" class="item-contcs__button txt-three" aria-label="кнопка виклику по телефону">
+										<img src="@img/icons/phone.svg" class="item-contcs__ic" alt="іконка телефону">
+										<span class="item-contcs__txt">
+											+38 (066) 072 54 74
+										</span>
+									</a>
+								</li>
+									<a href="https://maps.app.goo.gl/wmf3c3pePpdX1RTU7" target="_blank" class="item-contcs__button txt-three" aria-label="посилання на гугл мапу">
+										<img src="@img/icons/Location.svg" class="item-contcs__ic" alt="іконка локації">
+										<span class="item-contcs__txt">
+											Київ, Воздвиженьска, 41
+										</span>
+									</a>
+								</li>
+									<a href="mailto:office@ghack.agency" class="item-contcs__button txt-three" aria-label="кнопка відкриття поштового сервісу">
+										<img src="@img/icons/email.svg" class="item-contcs__ic" alt="іконка e-mail">
+										<span class="item-contcs__txt">
+											office@ghack.agency
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="contacts__container-sm">
+						<div data-gallery class="contacts__gallery gallery">
+							<a href="@img/contacts/gallery/01.jpg" class="gallery__image">
+								<img alt="Офіс 1" src="@img/contacts/gallery/01-thumb.jpg" class="gallery__preview ibg">
+							</a>
+							<a href="@img/contacts/gallery/02.jpg" class="gallery__image">
+								<img alt="Офіс 2" src="@img/contacts/gallery/02-thumb.jpg" class="gallery__preview ibg">
+							</a>
+							<a href="@img/contacts/gallery/03.jpg" class="gallery__image">
+								<img alt="Офіс 3" src="@img/contacts/gallery/03-thumb.jpg" class="gallery__preview ibg">
+							</a>
+							<a href="@img/contacts/gallery/04.jpg" class="gallery__image">
+								<img alt="Офіс 4" src="@img/contacts/gallery/04-thumb.jpg" class="gallery__preview ibg">
+							</a>
+							<a href="@img/contacts/gallery/05.jpg" class="gallery__image">
+								<img alt="Офіс 5" src="@img/contacts/gallery/05-thumb.jpg" class="gallery__preview ibg">
+							</a>
+						</div>
+						<div class="contacts__map">
+							<iframe class="ibg" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5080.128547646455!2d30.5120345!3d50.4585278!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce4260448ad3%3A0xea908be3be632117!2z0JHQuNC30L3QtdGBLdGG0LXQvdGC0YAgIkFydGV2aWxsYSwgVm96ZHZ5emhlbnMna2EgU3QsIDQxLCBLeWl2LCAwNDA3MQ!5e0!3m2!1sen!2sua!4v1706008534485!5m2!1sen!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					</div>
+				</section>
+				@@include('html/_form-two.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
