@@ -5165,6 +5165,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     font-size: 1.875rem;
   }
 
+  .page {
+    padding-top: 3.4375rem;
+  }
+
   .txt-five {
     font-size: 0.875rem;
   }
@@ -6331,6 +6335,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 2.5rem;
+  }
+
+  .case-hero {
+    min-height: calc(100vh - 55px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .case-hero__container-sx {
+    padding-bottom: 100px;
   }
 
   .case-creative__list {
@@ -8400,6 +8422,20 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 @supports not (font-size: clamp( 1.625rem , -1rem  +  2.9166666667vw , 2.5rem )) {
     .form-page__title .block-title__txt {
       font-size: calc(1.625rem + 0.875 * (100vw - 90rem) / 30);
+    }
+}
+}
+
+@media (min-width: 30em) and (max-width: 48em) {
+@supports (padding-top: clamp( 3.4375rem , 0.8333333333rem  +  8.6805555556vw , 5rem )) {
+    .page {
+      padding-top: clamp( 3.4375rem , 0.8333333333rem  +  8.6805555556vw , 5rem );
+    }
+}
+
+@supports not (padding-top: clamp( 3.4375rem , 0.8333333333rem  +  8.6805555556vw , 5rem )) {
+    .page {
+      padding-top: calc(3.4375rem + 1.5625 * (100vw - 30rem) / 18);
     }
 }
 }

@@ -23,6 +23,7 @@
 // -- отступ от хедера на всех страницах.
 .page {
   @include adaptiveValue("padding-top", 105, 80,0,1920,1440);
+  @include adaptiveValue("padding-top", 80, 55,3,768,480);
 }
 
 // -- page navigation ================================

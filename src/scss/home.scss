@@ -1579,6 +1579,12 @@
 // ===============================
 .case-hero {
   position: relative;
+  @media (max-width:$mobileSmall){
+     min-height: calc(100vh - 55px); 
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+  }
   // .case-hero__bg
   &__bg {
     position: absolute;
@@ -1590,6 +1596,9 @@
   &__container-sx {
     position: relative;
     z-index: 2;
+    @media (max-width:$mobileSmall){
+       padding-bottom: 100px; 
+    }
   }
   // .case-hero__title
   &__title {
