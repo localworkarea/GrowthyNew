@@ -1012,3 +1012,24 @@
   &__blank {
   }
 }
+
+.iti {
+  width: 100%;
+}
+.iti__flag {
+  height: 15px;
+  box-shadow: 0px 0px 1px 0px #888;
+  background-image: url("@img/flags/flags.png?1");
+  background-repeat: no-repeat;
+  background-color: #dbdbdb;
+  background-position: 20px 0;
+}
+@media (min-resolution: 2x) {
+  .iti__flag {
+    background-image: url("@img/flags/flags@2x.png?1");
+  }
+}
+.iti__selected-flag {
+  border-radius: toRem(20) 0 0 toRem(20);
+
+}

@@ -133,7 +133,7 @@ flsForms.formSubmit();
 Документація плагіна: https://github.com/RobinHerbots/inputmask
 Сніппет(HTML):
 */
-import "./files/forms/inputmask.js";
+// import "./files/forms/inputmask.js";
 
 /* Модуль роботи з повзунком */
 /*
@@ -185,7 +185,7 @@ import './files/scroll/lazyload.js';
 // Спостерігач за об'єктами з атрибутом data-watch
 // Документація: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html
 // Сніппет(HTML):
-import './libs/watcher.js'
+import './libs/watcher.js';
 
 // Модуль поекранної прокрутки
 // Документація: https://template.fls.guru/template-docs/modul-poekrannoj-prokrutki-stranicy-fullpage.html

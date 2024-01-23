@@ -6,8 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240123182459">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240123190011">
 	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.12/css/intlTelInput.css?_v=20240123190011" integrity="sha512-1fzvDP5eqhbc1j8H77kf7tBpz+lRlD+vTOuXz/A58/HcBUyH4BaJeo+xSyhE0Mo1V8JRSnAg5smJhkZo93EZOw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -347,7 +348,7 @@
 								</div>
 								<div class="form-first__item">
 									<label for="formQuestEmail" class="form-first__label txt-mac-02">Ваш телефон:</label>
-									<input id="formQuestEmail" type="tel" name="tel" data-inputmask="'mask': '+38 (099) 999 99 99'" placeholder="+38 (0__) ___ __ __" data-error="Заповніть поле" data-required class="form-first__input input">
+									<input id="formQuestEmail" type="tel" name="tel" data-error="Заповніть поле" data-required class="form-first__input input intl-phone">
 								</div>
 								<button type="submit" class="form-first__button form__button btn btn_01">Відправити</button>
 							</form>
@@ -470,7 +471,7 @@
 							<input type="email" name="email" placeholder="E-mail" data-error="Заповніть поле" data-required class="popup__input input">
 						</div>
 						<div class="popup__item">
-							<input type="tel" name="tel" data-inputmask="'mask': '+38 (099) 999 99 99'" placeholder="+38 (0__) ___ __ __" data-error="Заповніть поле" data-required class="popup__input input">
+							<input type="tel" name="tel" data-error="Заповніть поле" data-required class="popup__input input intl-phone">
 						</div>
 					</div>
 					<div class="popup__item">
@@ -482,7 +483,8 @@
 		</div>
 	</div>
 
-	<script src="js/app.min.js?_v=20240123182459"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.3/js/intlTelInput.min.js?_v=20240123190011"></script>
+	<script src="js/app.min.js?_v=20240123190011"></script>
 </body>
 
 </html>

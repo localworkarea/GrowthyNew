@@ -1131,6 +1131,26 @@ body::after {
   color: #fff;
 }
 
+.iti {
+  width: 100%;
+}
+
+.no-webp .iti__flag{
+  background-image: url("../img/flags/flags.png?1"); }
+
+.iti__flag {
+  height: 15px;
+  -webkit-box-shadow: 0px 0px 1px 0px #888;
+          box-shadow: 0px 0px 1px 0px #888;
+  background-repeat: no-repeat;
+  background-color: #dbdbdb;
+  background-position: 20px 0;
+}
+
+.iti__selected-flag {
+  border-radius: 1.25rem 0 0 1.25rem;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -9938,6 +9958,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2x) {
+  .no-webp .iti__flag{
+    background-image: url("../img/flags/flags@2x.png?1"); }
+}
+
+.webp .iti__flag{ background-image: url(../img/flags/flags.webp?1); }
+
 .webp .hero-service__container{ background-image: url(../img/elem/el-1.webp); }
 
 .webp .lg-outer .lg-item:not(.lg-start-end-progress){ background: url(data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAACwBQCdASogACAAPpFCnEolo6KhqAgAsBIJaQAD5dDxrXM99232GfVDjLF0EQDwsC0CXKtWlgAA/vV76pcYbjjsL88+3qb/4UfhRX+dwASYANdOF+J5Nu61NxB7TUbHeCQeee2d4nX3M/8oPzSbTnBOl/xCNiQkRhkYBtGvv3/fXfn2CbNj/EPmnHMb/H7zFQx28TJK5yXYt1B6zlKYbIeBfYPo1h1tsfJDbPjNrzTs7O1elyh7eF4fdYd8hFly7AAAAA==) no-repeat scroll center center transparent; }
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2x){
+
+  .webp .iti__flag{ background-image: url(../img/flags/flags@2x.webp?1); }
+}
