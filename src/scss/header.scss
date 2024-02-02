@@ -200,7 +200,7 @@
       @include adaptiveValue("margin-right", 20, 10,3,1439,360);
     }
     &:hover {
-      background-color: $orange;
+      background-color: #000;
       color: white;
     }
     @media (min-width:$mobileSmall){

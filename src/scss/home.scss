@@ -491,8 +491,8 @@
     
     padding-top: toRem(14);
     padding-bottom: toRem(14);
-    @include adaptiveValue("padding-left", 20, 14,3,1920,1440);
-    @include adaptiveValue("padding-right", 20, 14,3,1920,1440);
+    @include adaptiveValue("padding-left", 20, 14,0,1920,1440);
+    @include adaptiveValue("padding-right", 20, 14,0,1920,1440);
     border-radius: toRem(20);
     @include adaptiveValue("width", 190, 140,0,1920,1440);
 
@@ -846,10 +846,15 @@
 	// .home-seo__title
 	&__title {
     line-height: 1.15;
+    @include adaptiveValue("font-size", 36, 28,2,1920,1440);
+    @include adaptiveValue("font-size", 28, 20,3,1439,360);
+    font-weight: 700;
+    line-height: normal;
 	}
 	// .home-seo__texts
 	&__texts {
-    @include adaptiveValue("font-size", 26, 16,0,1920,480);
+    @include adaptiveValue("font-size", 22, 18,2,1920,1440);
+    @include adaptiveValue("font-size", 18, 16,3,1439,360);
     line-height: 1.15;
     p, li {
       &:not(:last-child) {
@@ -863,10 +868,14 @@
     }
     h2, h3, h4, h5, h6 {
       font-weight: 700;
+      @include adaptiveValue("font-size", 28, 18,0,1920,1440);
     }
     ol li {
       list-style: auto;
       @include adaptiveValue("margin-left", 30, 20,0,1920,400);
+    }
+    @media (min-width:em(1440.98)){
+        max-width: toRem(708);
     }
 	}
   // .home-seo__more
