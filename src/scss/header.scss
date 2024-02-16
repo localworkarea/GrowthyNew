@@ -31,8 +31,8 @@
   &__container {
     display: flex;
     align-items: center;
-    @include adaptiveValue("column-gap", 90, 60,2,1920,1440);
-    @include adaptiveValue("column-gap", 60, 20,3,1439,768);
+    @include adaptiveValue("column-gap", 90, 50,2,1920,1340.98);
+    @include adaptiveValue("column-gap", 50, 20,3,1340.98,768);
     @media (max-width: em(1340.98)){
         justify-content: space-between;
     }
@@ -41,8 +41,9 @@
   &__logo {
     display: block;
     img {
-      @include adaptiveValue("width", 129, 97,2,1920,1440);
-      @include adaptiveValue("width", 97, 86,3,1439,360);
+      @include adaptiveValue("width", 200, 150,0,1920,480.98);
+      // @include adaptiveValue("width", 129, 97,2,1920,1440);
+      // @include adaptiveValue("width", 97, 86,3,1439,360);
       height: auto;
     }
     @media (max-width: em(1340.40)){
@@ -59,12 +60,17 @@
   display: flex;
   align-items: center;
   gap: toRem(20);
-  justify-content: space-between;
+  // justify-content: space-between;
   @media (min-width:em(1340.98)){
     width: 100%;
   }
   // .menu__body
   &__body {
+    @media (min-width:em(1340.98)){
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
     @media (max-width: em(1340.98)) {
 			position: fixed;
 			width: 100%;
@@ -107,9 +113,13 @@
   }
   // .menu__item
   &__item {
+    @media (min-width:em(1340.98)){
+        flex: 0;
+    }
   }
   // .menu__link
   &__link {
+    white-space: nowrap;
     font-weight: 500;
     line-height: 1.2; 
     transition: color .3s ease;
@@ -121,9 +131,10 @@
         }
       }
     }
-    @media (min-width:em(1340.98)){
-      font-size: toRem(16);
-    }
+    @include adaptiveValue("font-size", 16, 14,2,1920,1340.98);
+    // @media (min-width:em(1340.98)){
+    //   font-size: toRem(16);
+    // }
     @media (max-width: em(1340.98)){
         font-size: toRem(28);
     }
@@ -196,8 +207,8 @@
     background-color: $gray;
     transition: background-color .3s ease, color .3s ease;
     &:not(:last-child) {
-      @include adaptiveValue("margin-right", 55, 20,2,1920,1440);
-      @include adaptiveValue("margin-right", 20, 10,3,1439,360);
+      // @include adaptiveValue("margin-right", 55, 20,2,1920,1440);
+      @include adaptiveValue("margin-right", 20, 10,0,1366,360);
     }
     &:hover {
       background-color: #000;
@@ -232,7 +243,7 @@
       color: $blue;
     }
     span {
-      @media (max-width: em(1650.98)){
+      @media (max-width: em(1700.98)){
           display: none;
       }
     }
@@ -243,14 +254,20 @@
   }
   // .menu__btn
   &__btn {
-    @media (min-width:em(1440.98)){
-      height: toRem(59);
-      min-width: toRem(284);
+    @include adaptiveValue("height", 59, 48,0,1920,1340.98);
+    @include adaptiveValue("min-width", 284, 202,2,1920,1340.98);
+    @include adaptiveValue("font-size", 16, 14,2,1920,1340.98);
+    // width: 100%;
+    @media (max-width:em(1340.98)){
+      min-width: toRem(240);
     }
     
     @media (max-width: em(1340.98)){
       position: relative;
       z-index: 5;
+    }
+    @media (max-width:$mobile){
+      height: toRem(59) !important;
     }
     @media (min-width:$mobile){
       text-wrap: nowrap;
